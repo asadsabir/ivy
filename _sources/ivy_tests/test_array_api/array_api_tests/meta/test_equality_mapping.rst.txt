@@ -1,0 +1,20 @@
+Test equality mapping
+=====================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_equality_mapping
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test equality mapping
+
+   test_equality_mapping/test_raises_on_distinct_eq_key.rst
+   test_equality_mapping/test_raises_on_indistinct_eq_keys.rst
+   test_equality_mapping/test_key_error.rst
+   test_equality_mapping/test_iter.rst
+

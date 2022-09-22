@@ -1,0 +1,28 @@
+Test layers
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_layers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test layers
+
+   test_layers/test_linear_layer.rst
+   test_layers/test_dropout_layer.rst
+   test_layers/test_multi_head_attention_layer.rst
+   test_layers/test_conv1d_layer.rst
+   test_layers/test_conv1d_transpose_layer.rst
+   test_layers/test_conv2d_layer.rst
+   test_layers/test_conv2d_transpose_layer.rst
+   test_layers/test_depthwise_conv2d_layer.rst
+   test_layers/test_conv3d_layer.rst
+   test_layers/test_conv3d_transpose_layer.rst
+   test_layers/test_lstm_layer.rst
+   test_layers/test_sequential_layer.rst
+

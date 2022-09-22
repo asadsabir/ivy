@@ -1,0 +1,19 @@
+Test decompositions
+===================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_linear_algebra.test_decompositions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test decompositions
+
+   test_decompositions/test_numpy_cholesky.rst
+   test_decompositions/test_numpy_qr.rst
+   test_decompositions/test_numpy_svd.rst
+

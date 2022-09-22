@@ -1,0 +1,17 @@
+Test jax lax linalg
+===================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_lax_linalg
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax lax linalg
+
+   test_jax_lax_linalg/test_jax_lax_cholesky.rst
+

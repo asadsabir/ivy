@@ -1,0 +1,47 @@
+Test dtype
+==========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test dtype
+
+   test_dtype/test_dtype_instances.rst
+   test_dtype/dtypes_shared.rst
+   test_dtype/test_astype.rst
+   test_dtype/broadcastable_arrays.rst
+   test_dtype/test_broadcast_arrays.rst
+   test_dtype/test_broadcast_to.rst
+   test_dtype/test_can_cast.rst
+   test_dtype/test_finfo.rst
+   test_dtype/test_iinfo.rst
+   test_dtype/test_result_type.rst
+   test_dtype/test_as_ivy_dtype.rst
+   test_dtype/test_as_native_dtype.rst
+   test_dtype/test_closest_valid_dtype.rst
+   test_dtype/test_default_dtype.rst
+   test_dtype/test_dtype.rst
+   test_dtype/test_dtype_bits.rst
+   test_dtype/test_is_bool_dtype.rst
+   test_dtype/test_is_float_dtype.rst
+   test_dtype/test_is_int_dtype.rst
+   test_dtype/test_promote_types.rst
+   test_dtype/test_type_promote_arrays.rst
+   test_dtype/test_default_float_dtype.rst
+   test_dtype/test_default_int_dtype.rst
+   test_dtype/dtypes_list.rst
+   test_dtype/test_function_supported_dtypes.rst
+   test_dtype/test_function_unsupported_dtypes.rst
+   test_dtype/test_invalid_dtype.rst
+   test_dtype/test_unset_default_dtype.rst
+   test_dtype/test_unset_default_float_dtype.rst
+   test_dtype/test_unset_default_int_dtype.rst
+   test_dtype/test_valid_dtype.rst
+

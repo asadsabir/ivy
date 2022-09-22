@@ -1,0 +1,18 @@
+Test vision functions
+=====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_vision_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test vision functions
+
+   test_vision_functions/test_torch_pixel_shuffle.rst
+   test_vision_functions/test_torch_pixel_unshuffle.rst
+

@@ -1,0 +1,25 @@
+Test utils
+==========
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_utils
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test utils
+
+   test_utils/test_frange.rst
+   test_utils/test_ndindex.rst
+   test_utils/test_axis_ndindex.rst
+   test_utils/test_axes_ndindex.rst
+   test_utils/test_roll_ndindex.rst
+   test_utils/test_fmt_idx.rst
+   test_utils/test_int_to_dtype.rst
+   test_utils/test_oneway_promotable_dtypes.rst
+   test_utils/test_oneway_broadcastable_shapes.rst
+

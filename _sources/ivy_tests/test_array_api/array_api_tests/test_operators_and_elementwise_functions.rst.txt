@@ -1,0 +1,93 @@
+Test operators and elementwise functions
+========================================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_operators_and_elementwise_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test operators and elementwise functions
+
+   test_operators_and_elementwise_functions/all_integer_dtypes.rst
+   test_operators_and_elementwise_functions/boolean_and_all_integer_dtypes.rst
+   test_operators_and_elementwise_functions/oneway_promotable_dtypes.rst
+   test_operators_and_elementwise_functions/oneway_broadcastable_shapes.rst
+   test_operators_and_elementwise_functions/mock_int_dtype.rst
+   test_operators_and_elementwise_functions/isclose.rst
+   test_operators_and_elementwise_functions/default_filter.rst
+   test_operators_and_elementwise_functions/unary_assert_against_refimpl.rst
+   test_operators_and_elementwise_functions/binary_assert_against_refimpl.rst
+   test_operators_and_elementwise_functions/right_scalar_assert_against_refimpl.rst
+   test_operators_and_elementwise_functions/make_unary_params.rst
+   test_operators_and_elementwise_functions/make_binary_params.rst
+   test_operators_and_elementwise_functions/binary_param_assert_dtype.rst
+   test_operators_and_elementwise_functions/binary_param_assert_shape.rst
+   test_operators_and_elementwise_functions/binary_param_assert_against_refimpl.rst
+   test_operators_and_elementwise_functions/test_abs.rst
+   test_operators_and_elementwise_functions/test_acos.rst
+   test_operators_and_elementwise_functions/test_acosh.rst
+   test_operators_and_elementwise_functions/test_add.rst
+   test_operators_and_elementwise_functions/test_asin.rst
+   test_operators_and_elementwise_functions/test_asinh.rst
+   test_operators_and_elementwise_functions/test_atan.rst
+   test_operators_and_elementwise_functions/test_atan2.rst
+   test_operators_and_elementwise_functions/test_atanh.rst
+   test_operators_and_elementwise_functions/test_bitwise_and.rst
+   test_operators_and_elementwise_functions/test_bitwise_left_shift.rst
+   test_operators_and_elementwise_functions/test_bitwise_invert.rst
+   test_operators_and_elementwise_functions/test_bitwise_or.rst
+   test_operators_and_elementwise_functions/test_bitwise_right_shift.rst
+   test_operators_and_elementwise_functions/test_bitwise_xor.rst
+   test_operators_and_elementwise_functions/test_ceil.rst
+   test_operators_and_elementwise_functions/test_cos.rst
+   test_operators_and_elementwise_functions/test_cosh.rst
+   test_operators_and_elementwise_functions/test_divide.rst
+   test_operators_and_elementwise_functions/test_equal.rst
+   test_operators_and_elementwise_functions/test_exp.rst
+   test_operators_and_elementwise_functions/test_expm1.rst
+   test_operators_and_elementwise_functions/test_floor.rst
+   test_operators_and_elementwise_functions/test_floor_divide.rst
+   test_operators_and_elementwise_functions/test_greater.rst
+   test_operators_and_elementwise_functions/test_greater_equal.rst
+   test_operators_and_elementwise_functions/test_isfinite.rst
+   test_operators_and_elementwise_functions/test_isinf.rst
+   test_operators_and_elementwise_functions/test_isnan.rst
+   test_operators_and_elementwise_functions/test_less.rst
+   test_operators_and_elementwise_functions/test_less_equal.rst
+   test_operators_and_elementwise_functions/test_log.rst
+   test_operators_and_elementwise_functions/test_log1p.rst
+   test_operators_and_elementwise_functions/test_log2.rst
+   test_operators_and_elementwise_functions/test_log10.rst
+   test_operators_and_elementwise_functions/logaddexp.rst
+   test_operators_and_elementwise_functions/test_logaddexp.rst
+   test_operators_and_elementwise_functions/test_logical_and.rst
+   test_operators_and_elementwise_functions/test_logical_not.rst
+   test_operators_and_elementwise_functions/test_logical_or.rst
+   test_operators_and_elementwise_functions/test_logical_xor.rst
+   test_operators_and_elementwise_functions/test_multiply.rst
+   test_operators_and_elementwise_functions/test_negative.rst
+   test_operators_and_elementwise_functions/test_not_equal.rst
+   test_operators_and_elementwise_functions/test_positive.rst
+   test_operators_and_elementwise_functions/test_pow.rst
+   test_operators_and_elementwise_functions/test_remainder.rst
+   test_operators_and_elementwise_functions/test_round.rst
+   test_operators_and_elementwise_functions/test_sign.rst
+   test_operators_and_elementwise_functions/test_sin.rst
+   test_operators_and_elementwise_functions/test_sinh.rst
+   test_operators_and_elementwise_functions/test_square.rst
+   test_operators_and_elementwise_functions/test_sqrt.rst
+   test_operators_and_elementwise_functions/test_subtract.rst
+   test_operators_and_elementwise_functions/test_tan.rst
+   test_operators_and_elementwise_functions/test_tanh.rst
+   test_operators_and_elementwise_functions/test_trunc.rst
+   test_operators_and_elementwise_functions/OnewayPromotableDtypes.rst
+   test_operators_and_elementwise_functions/OnewayBroadcastableShapes.rst
+   test_operators_and_elementwise_functions/UnaryParamContext.rst
+   test_operators_and_elementwise_functions/FuncType.rst
+   test_operators_and_elementwise_functions/BinaryParamContext.rst
+

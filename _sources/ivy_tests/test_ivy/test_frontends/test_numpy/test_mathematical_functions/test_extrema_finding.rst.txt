@@ -1,0 +1,17 @@
+Test extrema finding
+====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_extrema_finding
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test extrema finding
+
+   test_extrema_finding/test_numpy_minimum.rst
+

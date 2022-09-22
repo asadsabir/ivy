@@ -1,0 +1,41 @@
+ version
+========
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests._version
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption:  version
+
+   _version/get_keywords.rst
+   _version/get_config.rst
+   _version/register_vcs_handler.rst
+   _version/run_command.rst
+   _version/versions_from_parentdir.rst
+   _version/git_get_keywords.rst
+   _version/git_versions_from_keywords.rst
+   _version/git_pieces_from_vcs.rst
+   _version/plus_or_dot.rst
+   _version/render_pep440.rst
+   _version/render_pep440_branch.rst
+   _version/pep440_split_post.rst
+   _version/render_pep440_pre.rst
+   _version/render_pep440_post.rst
+   _version/render_pep440_post_branch.rst
+   _version/render_pep440_old.rst
+   _version/render_git_describe.rst
+   _version/render_git_describe_long.rst
+   _version/render.rst
+   _version/get_versions.rst
+   _version/"""
+
+
+def get_config.rst
+   _version/NotThisMethod.rst
+

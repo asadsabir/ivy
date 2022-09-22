@@ -1,0 +1,27 @@
+Test statistical
+================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_statistical
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test statistical
+
+   test_statistical/statistical_dtype_values.rst
+   test_statistical/test_min.rst
+   test_statistical/test_max.rst
+   test_statistical/test_mean.rst
+   test_statistical/test_var.rst
+   test_statistical/test_prod.rst
+   test_statistical/test_sum.rst
+   test_statistical/test_std.rst
+   test_statistical/test_cumsum.rst
+   test_statistical/test_cumprod.rst
+   test_statistical/test_einsum.rst
+

@@ -1,0 +1,17 @@
+Test jax lax custom gradient operators
+======================================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_lax_custom_gradient_operators
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax lax custom gradient operators
+
+   test_jax_lax_custom_gradient_operators/test_stop_gradient.rst
+

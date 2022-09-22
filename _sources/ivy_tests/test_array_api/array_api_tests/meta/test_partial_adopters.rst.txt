@@ -1,0 +1,17 @@
+Test partial adopters
+=====================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_partial_adopters
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test partial adopters
+
+   test_partial_adopters/test_mutually_promotable_dtypes.rst
+

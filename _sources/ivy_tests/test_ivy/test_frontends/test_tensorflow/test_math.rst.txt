@@ -1,0 +1,51 @@
+Test math
+=========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_tensorflow.test_math
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test math
+
+   test_math/test_tensorflow_add.rst
+   test_math/test_tensorflow_tan.rst
+   test_math/test_tensorflow_multiply.rst
+   test_math/test_tensorflow_subtract.rst
+   test_math/test_tensorflow_logical_xor.rst
+   test_math/test_tensorflow_divide.rst
+   test_math/test_tensorflow_negative.rst
+   test_math/test_tensorflow_logical_and.rst
+   test_math/test_tensorflow_log_sigmoid.rst
+   test_math/test_tensorflow_reciprocal_no_nan.rst
+   test_math/test_tensorflow_reduce_all.rst
+   test_math/test_tensorflow_reduce_any.rst
+   test_math/test_tensorflow_reduce_euclidean_norm.rst
+   test_math/test_tensorflow_reduce_logsumexp.rst
+   test_math/test_tensorflow_argmax.rst
+   test_math/test_tensorflow_reduce_max.rst
+   test_math/test_tensorflow_reduce_min.rst
+   test_math/test_tensorflow_reduce_prod.rst
+   test_math/test_tensorflow_reduce_std.rst
+   test_math/test_tensorflow_asinh.rst
+   test_math/test_tensorflow_reduce_sum.rst
+   test_math/test_tensorflow_reduce_mean.rst
+   test_math/test_tensorflow_reduce_variance.rst
+   test_math/test_tensorflow_scalar_mul.rst
+   test_math/test_tensorflow_divide_no_nan.rst
+   test_math/test_tensorflow_multiply_no_nan.rst
+   test_math/test_tensorflow_erfcinv.rst
+   test_math/test_tensorflow_is_non_decreasing.rst
+   test_math/test_tensorflow_is_strictly_increasing.rst
+   test_math/test_tensorflow_count_nonzero.rst
+   test_math/test_tensorflow_confusion_matrix.rst
+   test_math/test_tensorflow_polyval.rst
+   test_math/test_tensorflow_unsorted_segment_mean.rst
+   test_math/test_tensorflow_unsorted_segment_sqrt_n.rst
+   test_math/test_tensorflow_zero_fraction.rst
+

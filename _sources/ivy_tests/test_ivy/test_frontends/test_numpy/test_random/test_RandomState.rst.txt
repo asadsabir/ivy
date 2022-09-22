@@ -1,0 +1,16 @@
+Test randomstate
+================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_random.test_RandomState
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test randomstate
+
+

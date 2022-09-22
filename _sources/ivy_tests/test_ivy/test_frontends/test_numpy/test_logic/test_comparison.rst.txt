@@ -1,0 +1,17 @@
+Test comparison
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_logic.test_comparison
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test comparison
+
+   test_comparison/test_numpy_equal.rst
+

@@ -1,0 +1,26 @@
+Test miscellaneous
+==================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_miscellaneous
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test miscellaneous
+
+   test_miscellaneous/test_numpy_clip.rst
+   test_miscellaneous/test_numpy_cbrt.rst
+   test_miscellaneous/test_numpy_sqrt.rst
+   test_miscellaneous/test_numpy_square.rst
+   test_miscellaneous/test_numpy_absolute.rst
+   test_miscellaneous/test_numpy_fabs.rst
+   test_miscellaneous/test_numpy_heaviside.rst
+   test_miscellaneous/test_numpy_nan_to_num.rst
+   test_miscellaneous/test_numpy_real_if_close.rst
+   test_miscellaneous/test_numpy_interp.rst
+

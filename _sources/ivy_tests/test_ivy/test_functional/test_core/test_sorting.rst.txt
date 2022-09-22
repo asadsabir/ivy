@@ -1,0 +1,19 @@
+Test sorting
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_sorting
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test sorting
+
+   test_sorting/test_argsort.rst
+   test_sorting/test_sort.rst
+   test_sorting/test_searchsorted.rst
+

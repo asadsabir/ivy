@@ -1,0 +1,21 @@
+Test converters
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_converters
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test converters
+
+   test_converters/test_to_ivy_module.rst
+   test_converters/TorchLinearModule.rst
+   test_converters/TorchModule.rst
+   test_converters/HaikuLinear.rst
+   test_converters/HaikuModule.rst
+

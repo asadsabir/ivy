@@ -1,0 +1,20 @@
+Test logical operations
+=======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_logic.test_logical_operations
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test logical operations
+
+   test_logical_operations/test_numpy_logical_and.rst
+   test_logical_operations/test_numpy_logical_or.rst
+   test_logical_operations/test_numpy_logical_not.rst
+   test_logical_operations/test_numpy_logical_xor.rst
+

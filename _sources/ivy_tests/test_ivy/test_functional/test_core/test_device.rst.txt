@@ -1,0 +1,35 @@
+Test device
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_device
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test device
+
+   test_device/test_dev.rst
+   test_device/test_as_ivy_dev.rst
+   test_device/test_as_native_dev.rst
+   test_device/test_memory_on_dev.rst
+   test_device/test_default_device.rst
+   test_device/test_to_device.rst
+   test_device/test_split_func_call.rst
+   test_device/test_split_func_call_with_cont_input.rst
+   test_device/test_profiler.rst
+   test_device/test_num_arrays_on_dev.rst
+   test_device/test_get_all_arrays_on_dev.rst
+   test_device/test_print_all_ivy_arrays_on_dev.rst
+   test_device/test_total_mem_on_dev.rst
+   test_device/test_used_mem_on_dev.rst
+   test_device/test_percent_used_mem_on_dev.rst
+   test_device/test_gpu_is_available.rst
+   test_device/test_num_cpu_cores.rst
+   test_device/test_function_supported_devices.rst
+   test_device/test_function_unsupported_devices.rst
+

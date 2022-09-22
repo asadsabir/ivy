@@ -1,0 +1,18 @@
+Test utility
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_utility
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test utility
+
+   test_utility/test_all.rst
+   test_utility/test_any.rst
+

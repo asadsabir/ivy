@@ -1,0 +1,23 @@
+Test meta
+=========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_meta
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test meta
+
+   test_meta/test_fomaml_step_unique_vars.rst
+   test_meta/test_fomaml_step_shared_vars.rst
+   test_meta/test_fomaml_step_overlapping_vars.rst
+   test_meta/test_reptile_step.rst
+   test_meta/test_maml_step_unique_vars.rst
+   test_meta/test_maml_step_shared_vars.rst
+   test_meta/test_maml_step_overlapping_vars.rst
+

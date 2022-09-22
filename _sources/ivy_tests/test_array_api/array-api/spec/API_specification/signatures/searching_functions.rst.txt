@@ -1,0 +1,20 @@
+Searching functions
+===================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.searching_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Searching functions
+
+   searching_functions/argmax.rst
+   searching_functions/argmin.rst
+   searching_functions/nonzero.rst
+   searching_functions/where.rst
+

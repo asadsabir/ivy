@@ -1,0 +1,16 @@
+Test handling complex numbers
+=============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_handling_complex_numbers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test handling complex numbers
+
+

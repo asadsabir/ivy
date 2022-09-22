@@ -1,0 +1,16 @@
+Test indexing like operations
+=============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_indexing_routines.test_lib.test_stride_tricks.test_indexing_like_operations
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test indexing like operations
+
+

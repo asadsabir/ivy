@@ -1,0 +1,19 @@
+Test array type testing
+=======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_logic.test_array_type_testing
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test array type testing
+
+   test_array_type_testing/test_numpy_isfinite.rst
+   test_array_type_testing/test_numpy_isinf.rst
+   test_array_type_testing/test_numpy_isnan.rst
+

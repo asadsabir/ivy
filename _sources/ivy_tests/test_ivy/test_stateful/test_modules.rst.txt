@@ -1,0 +1,40 @@
+Test modules
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_modules
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test modules
+
+   test_modules/test_module_training.rst
+   test_modules/test_module_w_list_training.rst
+   test_modules/test_module_w_partial_v.rst
+   test_modules/test_module_w_none_attribute.rst
+   test_modules/test_module_training_with_duplicate.rst
+   test_modules/test_module_w_dict_training.rst
+   test_modules/test_with_custom_var_structure.rst
+   test_modules/test_top_variables.rst
+   test_modules/test_top_module.rst
+   test_modules/test_v_with_top_v_key_chains.rst
+   test_modules/test_module_depth.rst
+   test_modules/test_module_height.rst
+   test_modules/test_sub_modules.rst
+   test_modules/test_module_track_submod_rets.rst
+   test_modules/test_module_check_submod_rets.rst
+   test_modules/test_module_track_submod_call_order.rst
+   test_modules/TrainableModule.rst
+   test_modules/TrainableModuleWithList.rst
+   test_modules/ModuleWithNoneAttribute.rst
+   test_modules/TrainableModuleWithDuplicate.rst
+   test_modules/TrainableModuleWithDict.rst
+   test_modules/WithCustomVarStructure.rst
+   test_modules/DoubleLinear.rst
+   test_modules/WithNestedModules.rst
+

@@ -1,0 +1,17 @@
+Test inspection
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_inspection
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test inspection
+
+   test_inspection/test_fn_array_spec.rst
+

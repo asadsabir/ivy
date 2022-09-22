@@ -1,0 +1,18 @@
+Utility functions
+=================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.utility_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Utility functions
+
+   utility_functions/all.rst
+   utility_functions/any.rst
+

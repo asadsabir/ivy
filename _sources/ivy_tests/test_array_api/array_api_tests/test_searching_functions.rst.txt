@@ -1,0 +1,20 @@
+Test searching functions
+========================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_searching_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test searching functions
+
+   test_searching_functions/test_argmax.rst
+   test_searching_functions/test_argmin.rst
+   test_searching_functions/test_nonzero.rst
+   test_searching_functions/test_where.rst
+

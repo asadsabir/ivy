@@ -1,0 +1,25 @@
+Test array object
+=================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_array_object
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test array object
+
+   test_array_object/scalar_objects.rst
+   test_array_object/normalise_key.rst
+   test_array_object/get_indexed_axes_and_out_shape.rst
+   test_array_object/test_getitem.rst
+   test_array_object/test_setitem.rst
+   test_array_object/test_getitem_masking.rst
+   test_array_object/test_setitem_masking.rst
+   test_array_object/make_param.rst
+   test_array_object/test_scalar_casting.rst
+

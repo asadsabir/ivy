@@ -1,0 +1,24 @@
+Test sums products differences
+==============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_sums_products_differences
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test sums products differences
+
+   test_sums_products_differences/test_numpy_sum.rst
+   test_sums_products_differences/test_numpy_prod.rst
+   test_sums_products_differences/test_numpy_cumsum.rst
+   test_sums_products_differences/test_numpy_cumprod.rst
+   test_sums_products_differences/test_numpy_nancumprod.rst
+   test_sums_products_differences/test_numpy_nancumsum.rst
+   test_sums_products_differences/test_numpy_nanprod.rst
+   test_sums_products_differences/test_numpy_nansum.rst
+

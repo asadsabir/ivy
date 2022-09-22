@@ -1,0 +1,17 @@
+Test activations
+================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_tensorflow.test_activations
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test activations
+
+   test_activations/test_tensorflow_hard_sigmoid.rst
+

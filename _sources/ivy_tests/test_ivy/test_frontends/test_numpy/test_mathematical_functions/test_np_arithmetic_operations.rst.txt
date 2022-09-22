@@ -1,0 +1,23 @@
+Test np arithmetic operations
+=============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_np_arithmetic_operations
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test np arithmetic operations
+
+   test_np_arithmetic_operations/test_numpy_add.rst
+   test_np_arithmetic_operations/test_numpy_subtract.rst
+   test_np_arithmetic_operations/test_numpy_vdot.rst
+   test_np_arithmetic_operations/test_numpy_divide.rst
+   test_np_arithmetic_operations/test_numpy_multiply.rst
+   test_np_arithmetic_operations/test_numpy_positive.rst
+   test_np_arithmetic_operations/test_numpy_negative.rst
+

@@ -1,0 +1,17 @@
+Test functions
+==============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_random.test_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test functions
+
+   test_functions/test_numpy_random.rst
+

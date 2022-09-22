@@ -1,0 +1,16 @@
+Test matrix eigenvalues
+=======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_linear_algebra.test_matrix_eigenvalues
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test matrix eigenvalues
+
+

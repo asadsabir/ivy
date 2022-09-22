@@ -1,0 +1,20 @@
+Test np hyperbolic functions
+============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_np_hyperbolic_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test np hyperbolic functions
+
+   test_np_hyperbolic_functions/test_numpy_sinh.rst
+   test_np_hyperbolic_functions/test_numpy_tanh.rst
+   test_np_hyperbolic_functions/test_numpy_arcsinh.rst
+   test_np_hyperbolic_functions/test_numpy_arccosh.rst
+

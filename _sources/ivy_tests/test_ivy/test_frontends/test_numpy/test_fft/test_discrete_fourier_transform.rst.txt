@@ -1,0 +1,16 @@
+Test discrete fourier transform
+===============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_fft.test_discrete_fourier_transform
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test discrete fourier transform
+
+

@@ -1,0 +1,18 @@
+Test convolution functions
+==========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_convolution_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test convolution functions
+
+   test_convolution_functions/test_torch_conv2d_1.rst
+   test_convolution_functions/test_torch_conv2d_2.rst
+

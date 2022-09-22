@@ -1,0 +1,19 @@
+Test jax lax control flow operators
+===================================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_lax_control_flow_operators
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax lax control flow operators
+
+   test_jax_lax_control_flow_operators/test_jax_cond.rst
+   test_jax_lax_control_flow_operators/test_jax_map.rst
+   test_jax_lax_control_flow_operators/test_jax_switch.rst
+

@@ -1,0 +1,21 @@
+Test constants
+==============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_constants
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test constants
+
+   test_constants/assert_scalar_float.rst
+   test_constants/assert_0d_float.rst
+   test_constants/test_irrational_numbers.rst
+   test_constants/test_inf.rst
+   test_constants/test_nan.rst
+

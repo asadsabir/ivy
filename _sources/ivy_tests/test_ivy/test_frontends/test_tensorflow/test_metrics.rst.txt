@@ -1,0 +1,29 @@
+Test metrics
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_tensorflow.test_metrics
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test metrics
+
+   test_metrics/test_tensorflow_binary_accuracy.rst
+   test_metrics/test_sparse_categorical_crossentropy.rst
+   test_metrics/test_tensorflow_mean_absolute_error.rst
+   test_metrics/test_binary_crossentropy.rst
+   test_metrics/test_sparse_top_k_categorical_accuracy.rst
+   test_metrics/test_categorical_accuracy.rst
+   test_metrics/test_tensorflow_kl_divergence.rst
+   test_metrics/test_tensorflow_poisson.rst
+   test_metrics/test_tensorflow_mean_squared_error.rst
+   test_metrics/test_tensorflow_mean_absolute_percentage_error.rst
+   test_metrics/test_tensorflow_hinge.rst
+   test_metrics/test_tensorflow_squared_hinge.rst
+   test_metrics/test_tensorflow_metrics_mean_squared_logarithmic_error.rst
+

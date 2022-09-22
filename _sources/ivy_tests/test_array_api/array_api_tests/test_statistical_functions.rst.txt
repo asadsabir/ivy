@@ -1,0 +1,24 @@
+Test statistical functions
+==========================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_statistical_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test statistical functions
+
+   test_statistical_functions/kwarg_dtypes.rst
+   test_statistical_functions/test_max.rst
+   test_statistical_functions/test_mean.rst
+   test_statistical_functions/test_min.rst
+   test_statistical_functions/test_prod.rst
+   test_statistical_functions/test_std.rst
+   test_statistical_functions/test_sum.rst
+   test_statistical_functions/test_var.rst
+

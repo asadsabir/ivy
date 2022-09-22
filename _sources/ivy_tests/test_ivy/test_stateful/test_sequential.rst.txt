@@ -1,0 +1,19 @@
+Test sequential
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_sequential
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test sequential
+
+   test_sequential/test_sequential_construction_and_value.rst
+   test_sequential/test_sequential_same_as_class.rst
+   test_sequential/TrainableModule.rst
+

@@ -1,0 +1,21 @@
+Test creation ops
+=================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_creation_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test creation ops
+
+   test_creation_ops/test_torch_full.rst
+   test_creation_ops/test_torch_ones_like.rst
+   test_creation_ops/test_torch_ones.rst
+   test_creation_ops/test_torch_zeros.rst
+   test_creation_ops/test_torch_empty.rst
+

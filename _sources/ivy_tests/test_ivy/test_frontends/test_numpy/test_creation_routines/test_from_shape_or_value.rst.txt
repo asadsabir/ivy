@@ -1,0 +1,26 @@
+Test from shape or value
+========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_creation_routines.test_from_shape_or_value
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test from shape or value
+
+   test_from_shape_or_value/test_numpy_empty.rst
+   test_from_shape_or_value/test_numpy_empty_like.rst
+   test_from_shape_or_value/test_numpy_eye.rst
+   test_from_shape_or_value/test_numpy_identity.rst
+   test_from_shape_or_value/test_numpy_ones.rst
+   test_from_shape_or_value/test_numpy_ones_like.rst
+   test_from_shape_or_value/test_numpy_zeros.rst
+   test_from_shape_or_value/test_numpy_zeros_like.rst
+   test_from_shape_or_value/test_numpy_full.rst
+   test_from_shape_or_value/test_numpy_full_like.rst
+

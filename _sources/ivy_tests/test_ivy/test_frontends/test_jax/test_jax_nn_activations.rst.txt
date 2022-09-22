@@ -1,0 +1,36 @@
+Test jax nn activations
+=======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_nn_activations
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax nn activations
+
+   test_jax_nn_activations/test_jax_nn_relu.rst
+   test_jax_nn_activations/test_jax_nn_relu6.rst
+   test_jax_nn_activations/test_jax_nn_soft_sign.rst
+   test_jax_nn_activations/test_jax_nn_silu.rst
+   test_jax_nn_activations/test_jax_nn_leaky_relu.rst
+   test_jax_nn_activations/test_jax_nn_gelu.rst
+   test_jax_nn_activations/test_jax_nn_sigmoid.rst
+   test_jax_nn_activations/test_jax_nn_one_hot.rst
+   test_jax_nn_activations/test_jax_nn_softmax.rst
+   test_jax_nn_activations/test_jax_nn_softplus.rst
+   test_jax_nn_activations/test_jax_nn_log_sigmoid.rst
+   test_jax_nn_activations/test_jax_nn_log_softmax.rst
+   test_jax_nn_activations/test_jax_nn_glu.rst
+   test_jax_nn_activations/test_jax_nn_normalize.rst
+   test_jax_nn_activations/test_jax_nn_hard_tanh.rst
+   test_jax_nn_activations/test_jax_nn_celu.rst
+   test_jax_nn_activations/test_jax_nn_elu.rst
+   test_jax_nn_activations/test_jax_nn_logsumexp.rst
+   test_jax_nn_activations/test_jax_nn_swish.rst
+   test_jax_nn_activations/test_jax_nn_hard_swish.rst
+

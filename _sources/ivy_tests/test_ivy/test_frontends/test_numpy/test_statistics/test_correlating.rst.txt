@@ -1,0 +1,17 @@
+Test correlating
+================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_statistics.test_correlating
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test correlating
+
+   test_correlating/test_numpy_correlate.rst
+

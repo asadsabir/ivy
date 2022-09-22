@@ -1,0 +1,28 @@
+Test manipulation functions
+===========================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_manipulation_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test manipulation functions
+
+   test_manipulation_functions/shared_shapes.rst
+   test_manipulation_functions/assert_array_ndindex.rst
+   test_manipulation_functions/test_concat.rst
+   test_manipulation_functions/test_expand_dims.rst
+   test_manipulation_functions/test_squeeze.rst
+   test_manipulation_functions/test_flip.rst
+   test_manipulation_functions/test_permute_dims.rst
+   test_manipulation_functions/reshape_shapes.rst
+   test_manipulation_functions/test_reshape.rst
+   test_manipulation_functions/roll_ndindex.rst
+   test_manipulation_functions/test_roll.rst
+   test_manipulation_functions/test_stack.rst
+

@@ -1,0 +1,36 @@
+Test comparison ops
+===================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_comparison_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test comparison ops
+
+   test_comparison_ops/test_torch_allclose.rst
+   test_comparison_ops/test_torch_equal.rst
+   test_comparison_ops/test_torch_eq.rst
+   test_comparison_ops/test_torch_argsort.rst
+   test_comparison_ops/test_torch_greater_equal.rst
+   test_comparison_ops/test_torch_greater.rst
+   test_comparison_ops/test_torch_isclose.rst
+   test_comparison_ops/test_torch_isfinite.rst
+   test_comparison_ops/test_torch_isinf.rst
+   test_comparison_ops/test_torch_isposinf.rst
+   test_comparison_ops/test_torch_isneginf.rst
+   test_comparison_ops/test_torch_sort.rst
+   test_comparison_ops/test_torch_isnan.rst
+   test_comparison_ops/test_torch_less_equal.rst
+   test_comparison_ops/test_torch_less.rst
+   test_comparison_ops/test_torch_not_equal.rst
+   test_comparison_ops/test_torch_minimum.rst
+   test_comparison_ops/test_torch_fmax.rst
+   test_comparison_ops/test_torch_fmin.rst
+   test_comparison_ops/test_torch_msort.rst
+

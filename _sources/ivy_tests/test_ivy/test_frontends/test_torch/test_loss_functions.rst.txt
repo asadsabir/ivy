@@ -1,0 +1,18 @@
+Test loss functions
+===================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_loss_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test loss functions
+
+   test_loss_functions/test_torch_cross_entropy.rst
+   test_loss_functions/test_torch_binary_cross_entropy.rst
+

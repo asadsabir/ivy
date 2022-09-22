@@ -1,0 +1,25 @@
+Test data type functions
+========================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_data_type_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test data type functions
+
+   test_data_type_functions/float32.rst
+   test_data_type_functions/test_astype.rst
+   test_data_type_functions/test_broadcast_arrays.rst
+   test_data_type_functions/test_broadcast_to.rst
+   test_data_type_functions/test_can_cast.rst
+   test_data_type_functions/make_dtype_id.rst
+   test_data_type_functions/test_finfo.rst
+   test_data_type_functions/test_iinfo.rst
+   test_data_type_functions/test_result_type.rst
+

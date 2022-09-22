@@ -1,0 +1,24 @@
+Manipulation functions
+======================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.manipulation_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Manipulation functions
+
+   manipulation_functions/concat.rst
+   manipulation_functions/expand_dims.rst
+   manipulation_functions/flip.rst
+   manipulation_functions/permute_dims.rst
+   manipulation_functions/reshape.rst
+   manipulation_functions/roll.rst
+   manipulation_functions/squeeze.rst
+   manipulation_functions/stack.rst
+

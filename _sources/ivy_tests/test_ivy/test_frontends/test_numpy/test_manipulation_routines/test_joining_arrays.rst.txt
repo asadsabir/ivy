@@ -1,0 +1,17 @@
+Test joining arrays
+===================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_manipulation_routines.test_joining_arrays
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test joining arrays
+
+   test_joining_arrays/test_numpy_concatenate.rst
+

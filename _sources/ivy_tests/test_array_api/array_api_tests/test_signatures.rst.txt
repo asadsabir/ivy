@@ -1,0 +1,21 @@
+Test signatures
+===============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_signatures
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test signatures
+
+   test_signatures/get_dtypes_strategy.rst
+   test_signatures/make_pretty_func.rst
+   test_signatures/test_func_signature.rst
+   test_signatures/test_extension_func_signature.rst
+   test_signatures/test_array_method_signature.rst
+

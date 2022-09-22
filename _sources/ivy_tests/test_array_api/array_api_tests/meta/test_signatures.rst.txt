@@ -1,0 +1,19 @@
+Test signatures
+===============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_signatures
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test signatures
+
+   test_signatures/stub.rst
+   test_signatures/test_good_sig_passes.rst
+   test_signatures/test_raises_on_bad_sig.rst
+

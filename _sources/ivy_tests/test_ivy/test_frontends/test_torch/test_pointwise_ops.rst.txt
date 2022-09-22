@@ -1,0 +1,55 @@
+Test pointwise ops
+==================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_pointwise_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test pointwise ops
+
+   test_pointwise_ops/test_torch_add.rst
+   test_pointwise_ops/test_torch_tan.rst
+   test_pointwise_ops/test_torch_atan.rst
+   test_pointwise_ops/test_torch_tanh.rst
+   test_pointwise_ops/test_torch_abs.rst
+   test_pointwise_ops/test_torch_cos.rst
+   test_pointwise_ops/test_torch_sin.rst
+   test_pointwise_ops/test_torch_acos.rst
+   test_pointwise_ops/test_torch_sinh.rst
+   test_pointwise_ops/test_torch_acosh.rst
+   test_pointwise_ops/test_torch_arccos.rst
+   test_pointwise_ops/test_torch_subtract.rst
+   test_pointwise_ops/test_torch_exp.rst
+   test_pointwise_ops/test_torch_asin.rst
+   test_pointwise_ops/test_torch_arccosh.rst
+   test_pointwise_ops/test_torch_arcsin.rst
+   test_pointwise_ops/test_torch_asinh.rst
+   test_pointwise_ops/test_torch_cosh.rst
+   test_pointwise_ops/test_torch_atanh.rst
+   test_pointwise_ops/test_torch_arctanh.rst
+   test_pointwise_ops/test_torch_log2.rst
+   test_pointwise_ops/test_torch_square.rst
+   test_pointwise_ops/test_torch_atan2.rst
+   test_pointwise_ops/test_torch_negative.rst
+   test_pointwise_ops/test_torch_bitwise_and.rst
+   test_pointwise_ops/test_torch_bitwise_not.rst
+   test_pointwise_ops/test_torch_bitwise_xor.rst
+   test_pointwise_ops/test_torch_bitwise_or.rst
+   test_pointwise_ops/test_torch_bitwise_left_shift.rst
+   test_pointwise_ops/test_torch_bitwise_right_shift.rst
+   test_pointwise_ops/test_torch_log10.rst
+   test_pointwise_ops/test_torch_trunc.rst
+   test_pointwise_ops/test_torch_sqrt.rst
+   test_pointwise_ops/test_torch_sign.rst
+   test_pointwise_ops/test_torch_absolute.rst
+   test_pointwise_ops/test_torch_logical_not.rst
+   test_pointwise_ops/test_torch_logical_and.rst
+   test_pointwise_ops/test_torch_logical_or.rst
+   test_pointwise_ops/test_torch_logical_xor.rst
+

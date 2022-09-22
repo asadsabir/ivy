@@ -1,0 +1,34 @@
+Pytest helpers
+==============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.pytest_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Pytest helpers
+
+   pytest_helpers/raises.rst
+   pytest_helpers/doesnt_raise.rst
+   pytest_helpers/nargs.rst
+   pytest_helpers/fmt_kw.rst
+   pytest_helpers/is_pos_zero.rst
+   pytest_helpers/is_neg_zero.rst
+   pytest_helpers/assert_dtype.rst
+   pytest_helpers/assert_kw_dtype.rst
+   pytest_helpers/assert_default_float.rst
+   pytest_helpers/assert_default_int.rst
+   pytest_helpers/assert_default_index.rst
+   pytest_helpers/assert_shape.rst
+   pytest_helpers/assert_result_shape.rst
+   pytest_helpers/assert_keepdimable_shape.rst
+   pytest_helpers/assert_0d_equals.rst
+   pytest_helpers/assert_scalar_equals.rst
+   pytest_helpers/assert_fill.rst
+   pytest_helpers/assert_array_elements.rst
+

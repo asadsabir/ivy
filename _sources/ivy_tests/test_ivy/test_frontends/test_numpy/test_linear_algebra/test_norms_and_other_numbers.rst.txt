@@ -1,0 +1,20 @@
+Test norms and other numbers
+============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_linear_algebra.test_norms_and_other_numbers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test norms and other numbers
+
+   test_norms_and_other_numbers/test_numpy_norm.rst
+   test_norms_and_other_numbers/test_numpy_matrix_rank.rst
+   test_norms_and_other_numbers/test_numpy_det.rst
+   test_norms_and_other_numbers/test_numpy_slogdet.rst
+

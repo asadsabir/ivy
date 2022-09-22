@@ -1,0 +1,28 @@
+Test miscellaneous ops
+======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_miscellaneous_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test miscellaneous ops
+
+   test_miscellaneous_ops/test_torch_flip.rst
+   test_miscellaneous_ops/test_torch_roll.rst
+   test_miscellaneous_ops/test_torch_fliplr.rst
+   test_miscellaneous_ops/test_torch_cumsum.rst
+   test_miscellaneous_ops/dims_and_offset.rst
+   test_miscellaneous_ops/test_torch_diagonal.rst
+   test_miscellaneous_ops/test_torch_triu.rst
+   test_miscellaneous_ops/test_torch_cumprod.rst
+   test_miscellaneous_ops/test_torch_tril_indices.rst
+   test_miscellaneous_ops/test_torch_triu_indices.rst
+   test_miscellaneous_ops/test_torch_tril.rst
+   test_miscellaneous_ops/test_torch_flatten.rst
+

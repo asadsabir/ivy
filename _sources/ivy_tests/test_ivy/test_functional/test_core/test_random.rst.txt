@@ -1,0 +1,22 @@
+Test random
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_random
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test random
+
+   test_random/test_random_uniform.rst
+   test_random/test_random_normal.rst
+   test_random/test_multinomial.rst
+   test_random/test_randint.rst
+   test_random/test_seed.rst
+   test_random/test_shuffle.rst
+

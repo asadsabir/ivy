@@ -1,0 +1,18 @@
+Algos
+=====
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.algos
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Algos
+
+   algos/broadcast_shapes.rst
+   algos/BroadcastError.rst
+

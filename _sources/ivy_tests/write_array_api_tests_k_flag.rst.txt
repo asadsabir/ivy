@@ -1,0 +1,16 @@
+Write array api tests k flag
+============================
+
+.. automodule:: ivy.ivy_tests.write_array_api_tests_k_flag
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Write array api tests k flag
+
+

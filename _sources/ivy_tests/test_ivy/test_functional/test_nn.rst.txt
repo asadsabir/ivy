@@ -1,0 +1,8 @@
+Test nn
+=======
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_nn
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

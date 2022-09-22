@@ -1,0 +1,18 @@
+Test broadcasting
+=================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_broadcasting
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test broadcasting
+
+   test_broadcasting/test_broadcast_shapes.rst
+   test_broadcasting/test_broadcast_shapes_fails_on_bad_shapes.rst
+

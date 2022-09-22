@@ -1,0 +1,25 @@
+Test linalg
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_tensorflow.test_linalg
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test linalg
+
+   test_linalg/test_tensorflow_det.rst
+   test_linalg/test_tensorflow_eigvalsh.rst
+   test_linalg/test_matrix_rank.rst
+   test_linalg/test_tensorflow_solve.rst
+   test_linalg/test_tensorflow_slogdet.rst
+   test_linalg/test_tensorflow_cholesky_solve.rst
+   test_linalg/test_tensorflow_pinv.rst
+   test_linalg/test_tensorflow_tensordot.rst
+   test_linalg/test_tensorflow_eye.rst
+

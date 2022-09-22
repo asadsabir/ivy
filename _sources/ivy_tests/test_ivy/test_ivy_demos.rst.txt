@@ -1,0 +1,18 @@
+Test ivy demos
+==============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_ivy_demos
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test ivy demos
+
+   test_ivy_demos/test_training_demo.rst
+   test_ivy_demos/test_array.rst
+

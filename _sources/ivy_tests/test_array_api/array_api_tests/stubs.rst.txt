@@ -1,0 +1,16 @@
+Stubs
+=====
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.stubs
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Stubs
+
+

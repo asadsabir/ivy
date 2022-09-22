@@ -1,0 +1,36 @@
+Test nest
+=========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_nest
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test nest
+
+   test_nest/apply_fn_to_list.rst
+   test_nest/map_nested_dicts.rst
+   test_nest/test_index_nest.rst
+   test_nest/test_set_nest_at_index.rst
+   test_nest/test_map_nest_at_index.rst
+   test_nest/test_multi_index_nest.rst
+   test_nest/test_set_nest_at_indices.rst
+   test_nest/test_map_nest_at_indices.rst
+   test_nest/test_nested_argwhere.rst
+   test_nest/test_nested_argwhere_w_nest_checks.rst
+   test_nest/test_all_nested_indices.rst
+   test_nest/test_all_nested_indices_w_nest_checks.rst
+   test_nest/test_copy_nest.rst
+   test_nest/test_nested_multi_map.rst
+   test_nest/test_prune_nest_at_index.rst
+   test_nest/test_prune_nest_at_indices.rst
+   test_nest/test_insert_into_nest_index.rst
+   test_nest/test_insert_into_nest_at_indices.rst
+   test_nest/test_nested_map.rst
+   test_nest/test_nested_any.rst
+

@@ -1,0 +1,17 @@
+Test special cases
+==================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_special_cases
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test special cases
+
+   test_special_cases/test_parse_result.rst
+

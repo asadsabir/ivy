@@ -1,0 +1,38 @@
+Test blas and lapack ops
+========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_blas_and_lapack_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test blas and lapack ops
+
+   test_blas_and_lapack_ops/test_torch_addbmm.rst
+   test_blas_and_lapack_ops/test_torch_addmm.rst
+   test_blas_and_lapack_ops/test_torch_addmv.rst
+   test_blas_and_lapack_ops/test_torch_addr.rst
+   test_blas_and_lapack_ops/test_torch_baddbmm.rst
+   test_blas_and_lapack_ops/test_torch_bmm.rst
+   test_blas_and_lapack_ops/test_torch_cholesky.rst
+   test_blas_and_lapack_ops/test_torch_ger.rst
+   test_blas_and_lapack_ops/test_torch_inverse.rst
+   test_blas_and_lapack_ops/test_torch_det.rst
+   test_blas_and_lapack_ops/test_torch_logdet.rst
+   test_blas_and_lapack_ops/test_torch_slogdet.rst
+   test_blas_and_lapack_ops/test_torch_matmul.rst
+   test_blas_and_lapack_ops/test_torch_matrix_power.rst
+   test_blas_and_lapack_ops/test_torch_matrix_rank.rst
+   test_blas_and_lapack_ops/test_torch_mm.rst
+   test_blas_and_lapack_ops/test_torch_mv.rst
+   test_blas_and_lapack_ops/test_torch_outer.rst
+   test_blas_and_lapack_ops/test_torch_pinverse.rst
+   test_blas_and_lapack_ops/test_torch_qr.rst
+   test_blas_and_lapack_ops/test_torch_svd.rst
+   test_blas_and_lapack_ops/test_torch_vdot.rst
+

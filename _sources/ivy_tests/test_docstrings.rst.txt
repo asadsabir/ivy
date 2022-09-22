@@ -1,0 +1,19 @@
+Test docstrings
+===============
+
+.. automodule:: ivy.ivy_tests.test_docstrings
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test docstrings
+
+   test_docstrings/trim.rst
+   test_docstrings/check_docstring_examples_run.rst
+   test_docstrings/test_docstrings.rst
+

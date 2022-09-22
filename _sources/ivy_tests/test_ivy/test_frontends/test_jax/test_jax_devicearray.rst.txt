@@ -1,0 +1,18 @@
+Test jax devicearray
+====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_devicearray
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax devicearray
+
+   test_jax_devicearray/test_jax_instance_reshape.rst
+   test_jax_devicearray/test_jax_instance_add.rst
+

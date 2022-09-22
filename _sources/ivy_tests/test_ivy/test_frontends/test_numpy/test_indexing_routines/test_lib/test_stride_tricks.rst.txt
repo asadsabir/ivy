@@ -1,0 +1,8 @@
+Test stride tricks
+==================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_indexing_routines.test_lib.test_stride_tricks
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

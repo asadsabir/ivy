@@ -1,0 +1,8 @@
+Signatures
+==========
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

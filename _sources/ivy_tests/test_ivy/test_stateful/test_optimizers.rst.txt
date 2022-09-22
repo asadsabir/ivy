@@ -1,0 +1,20 @@
+Test optimizers
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_optimizers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test optimizers
+
+   test_optimizers/test_sgd_optimizer.rst
+   test_optimizers/test_lars_optimizer.rst
+   test_optimizers/test_adam_optimizer.rst
+   test_optimizers/test_lamb_optimizer.rst
+

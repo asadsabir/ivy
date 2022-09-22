@@ -1,0 +1,41 @@
+Test non linear activation functions
+====================================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_non_linear_activation_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test non linear activation functions
+
+   test_non_linear_activation_functions/test_torch_sigmoid.rst
+   test_non_linear_activation_functions/test_torch_softmax.rst
+   test_non_linear_activation_functions/test_torch_gelu.rst
+   test_non_linear_activation_functions/test_torch_leaky_relu.rst
+   test_non_linear_activation_functions/test_torch_tanh.rst
+   test_non_linear_activation_functions/test_torch_logsigmoid.rst
+   test_non_linear_activation_functions/test_torch_softmin.rst
+   test_non_linear_activation_functions/test_torch_threshold.rst
+   test_non_linear_activation_functions/test_torch_threshold_.rst
+   test_non_linear_activation_functions/test_torch_relu6.rst
+   test_non_linear_activation_functions/test_torch_elu.rst
+   test_non_linear_activation_functions/test_torch_elu_.rst
+   test_non_linear_activation_functions/test_torch_celu.rst
+   test_non_linear_activation_functions/test_torch_selu.rst
+   test_non_linear_activation_functions/test_torch_prelu.rst
+   test_non_linear_activation_functions/test_torch_rrelu.rst
+   test_non_linear_activation_functions/test_torch_rrelu_.rst
+   test_non_linear_activation_functions/test_torch_hardshrink.rst
+   test_non_linear_activation_functions/test_torch_softsign.rst
+   test_non_linear_activation_functions/test_torch_softshrink.rst
+   test_non_linear_activation_functions/test_torch_silu.rst
+   test_non_linear_activation_functions/test_torch_glu.rst
+   test_non_linear_activation_functions/test_torch_log_softmax.rst
+   test_non_linear_activation_functions/test_torch_tanhshrink.rst
+   test_non_linear_activation_functions/test_torch_leaky_relu_.rst
+

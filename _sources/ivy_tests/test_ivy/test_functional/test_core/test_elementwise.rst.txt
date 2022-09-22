@@ -1,0 +1,79 @@
+Test elementwise
+================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_elementwise
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test elementwise
+
+   test_elementwise/test_abs.rst
+   test_elementwise/test_acosh.rst
+   test_elementwise/test_acos.rst
+   test_elementwise/test_add.rst
+   test_elementwise/test_asin.rst
+   test_elementwise/test_asinh.rst
+   test_elementwise/test_atan.rst
+   test_elementwise/test_atan2.rst
+   test_elementwise/test_atanh.rst
+   test_elementwise/test_bitwise_and.rst
+   test_elementwise/test_bitwise_left_shift.rst
+   test_elementwise/test_bitwise_invert.rst
+   test_elementwise/test_bitwise_or.rst
+   test_elementwise/test_bitwise_right_shift.rst
+   test_elementwise/test_bitwise_xor.rst
+   test_elementwise/test_ceil.rst
+   test_elementwise/test_cos.rst
+   test_elementwise/test_cosh.rst
+   test_elementwise/test_divide.rst
+   test_elementwise/test_equal.rst
+   test_elementwise/test_exp.rst
+   test_elementwise/test_expm1.rst
+   test_elementwise/test_floor.rst
+   test_elementwise/test_floor_divide.rst
+   test_elementwise/test_greater.rst
+   test_elementwise/test_greater_equal.rst
+   test_elementwise/test_isfinite.rst
+   test_elementwise/test_isinf.rst
+   test_elementwise/test_isnan.rst
+   test_elementwise/test_less.rst
+   test_elementwise/test_less_equal.rst
+   test_elementwise/test_log.rst
+   test_elementwise/test_log1p.rst
+   test_elementwise/test_log2.rst
+   test_elementwise/test_log10.rst
+   test_elementwise/test_logaddexp.rst
+   test_elementwise/test_logical_and.rst
+   test_elementwise/test_logical_not.rst
+   test_elementwise/test_logical_or.rst
+   test_elementwise/test_logical_xor.rst
+   test_elementwise/test_multiply.rst
+   test_elementwise/test_negative.rst
+   test_elementwise/test_not_equal.rst
+   test_elementwise/test_positive.rst
+   test_elementwise/test_pow.rst
+   test_elementwise/test_remainder.rst
+   test_elementwise/test_round.rst
+   test_elementwise/test_sign.rst
+   test_elementwise/test_sin.rst
+   test_elementwise/test_sinh.rst
+   test_elementwise/test_square.rst
+   test_elementwise/test_sqrt.rst
+   test_elementwise/test_subtract.rst
+   test_elementwise/test_tan.rst
+   test_elementwise/test_tanh.rst
+   test_elementwise/test_trunc.rst
+   test_elementwise/test_erf.rst
+   test_elementwise/test_minimum.rst
+   test_elementwise/test_maximum.rst
+   test_elementwise/test_reciprocal.rst
+   test_elementwise/test_deg2rad.rst
+   test_elementwise/test_rad2deg.rst
+   test_elementwise/test_trunc_divide.rst
+

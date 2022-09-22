@@ -1,0 +1,8 @@
+Test sorting searching counting
+===============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_sorting_searching_counting
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

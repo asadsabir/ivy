@@ -1,0 +1,17 @@
+Test norms
+==========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_norms
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test norms
+
+   test_norms/test_layer_norm_layer.rst
+

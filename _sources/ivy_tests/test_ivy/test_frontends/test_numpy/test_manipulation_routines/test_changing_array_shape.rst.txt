@@ -1,0 +1,18 @@
+Test changing array shape
+=========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_manipulation_routines.test_changing_array_shape
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test changing array shape
+
+   test_changing_array_shape/dtypes_x_reshape.rst
+   test_changing_array_shape/test_numpy_reshape.rst
+

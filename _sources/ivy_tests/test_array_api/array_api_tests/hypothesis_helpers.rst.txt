@@ -1,0 +1,38 @@
+Hypothesis helpers
+==================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.hypothesis_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Hypothesis helpers
+
+   hypothesis_helpers/mutually_promotable_dtypes.rst
+   hypothesis_helpers/prod.rst
+   hypothesis_helpers/tuples.rst
+   hypothesis_helpers/shapes.rst
+   hypothesis_helpers/matrix_shapes.rst
+   hypothesis_helpers/finite_matrices.rst
+   hypothesis_helpers/mutually_broadcastable_shapes.rst
+   hypothesis_helpers/symmetric_matrices.rst
+   hypothesis_helpers/positive_definite_matrices.rst
+   hypothesis_helpers/invertible_matrices.rst
+   hypothesis_helpers/two_broadcastable_shapes.rst
+   hypothesis_helpers/scalars.rst
+   hypothesis_helpers/array_scalars.rst
+   hypothesis_helpers/python_integer_indices.rst
+   hypothesis_helpers/integer_indices.rst
+   hypothesis_helpers/slices.rst
+   hypothesis_helpers/multiaxis_indices.rst
+   hypothesis_helpers/two_mutual_arrays.rst
+   hypothesis_helpers/kwargs.rst
+   hypothesis_helpers/specified_kwargs.rst
+   hypothesis_helpers/axes.rst
+   hypothesis_helpers/KVD.rst
+

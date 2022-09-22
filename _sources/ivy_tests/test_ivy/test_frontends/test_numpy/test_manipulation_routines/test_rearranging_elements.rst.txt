@@ -1,0 +1,18 @@
+Test rearranging elements
+=========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_manipulation_routines.test_rearranging_elements
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test rearranging elements
+
+   test_rearranging_elements/test_numpy_roll.rst
+   test_rearranging_elements/test_numpy_flip.rst
+

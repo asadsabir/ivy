@@ -1,0 +1,41 @@
+Test linalg
+===========
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_linalg
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test linalg
+
+   test_linalg/test_cholesky.rst
+   test_linalg/cross_args.rst
+   test_linalg/test_cross.rst
+   test_linalg/test_det.rst
+   test_linalg/test_diagonal.rst
+   test_linalg/test_eigh.rst
+   test_linalg/test_eigvalsh.rst
+   test_linalg/test_inv.rst
+   test_linalg/test_matmul.rst
+   test_linalg/test_matrix_norm.rst
+   test_linalg/test_matrix_power.rst
+   test_linalg/test_matrix_rank.rst
+   test_linalg/test_matrix_transpose.rst
+   test_linalg/test_outer.rst
+   test_linalg/test_pinv.rst
+   test_linalg/test_qr.rst
+   test_linalg/test_slogdet.rst
+   test_linalg/solve_args.rst
+   test_linalg/test_solve.rst
+   test_linalg/test_svd.rst
+   test_linalg/test_svdvals.rst
+   test_linalg/test_tensordot.rst
+   test_linalg/test_trace.rst
+   test_linalg/test_vecdot.rst
+   test_linalg/test_vector_norm.rst
+

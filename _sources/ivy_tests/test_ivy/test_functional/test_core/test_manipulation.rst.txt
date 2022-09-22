@@ -1,0 +1,32 @@
+Test manipulation
+=================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_manipulation
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test manipulation
+
+   test_manipulation/test_concat.rst
+   test_manipulation/test_expand_dims.rst
+   test_manipulation/test_flip.rst
+   test_manipulation/test_permute_dims.rst
+   test_manipulation/test_reshape.rst
+   test_manipulation/test_roll.rst
+   test_manipulation/test_squeeze.rst
+   test_manipulation/test_stack.rst
+   test_manipulation/test_clip.rst
+   test_manipulation/test_constant_pad.rst
+   test_manipulation/test_repeat.rst
+   test_manipulation/test_split.rst
+   test_manipulation/test_swapaxes.rst
+   test_manipulation/test_tile.rst
+   test_manipulation/test_zero_pad.rst
+   test_manipulation/test_unstack.rst
+

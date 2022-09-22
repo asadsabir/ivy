@@ -1,0 +1,74 @@
+Test jax lax operators
+======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_jax.test_jax_lax_operators
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test jax lax operators
+
+   test_jax_lax_operators/test_jax_lax_add.rst
+   test_jax_lax_operators/test_jax_lax_tan.rst
+   test_jax_lax_operators/test_jax_lax_max.rst
+   test_jax_lax_operators/test_jax_lax_concat.rst
+   test_jax_lax_operators/test_jax_lax_full.rst
+   test_jax_lax_operators/test_jax_lax_abs.rst
+   test_jax_lax_operators/test_jax_lax_sqrt.rst
+   test_jax_lax_operators/test_jax_lax_acos.rst
+   test_jax_lax_operators/test_jax_lax_sin.rst
+   test_jax_lax_operators/test_jax_lax_sign.rst
+   test_jax_lax_operators/test_jax_lax_asin.rst
+   test_jax_lax_operators/test_jax_lax_sinh.rst
+   test_jax_lax_operators/test_jax_lax_atan2.rst
+   test_jax_lax_operators/test_jax_lax_min.rst
+   test_jax_lax_operators/test_jax_lax_eq.rst
+   test_jax_lax_operators/test_jax_lax_mul.rst
+   test_jax_lax_operators/test_jax_lax_atan.rst
+   test_jax_lax_operators/test_jax_lax_ceil.rst
+   test_jax_lax_operators/test_jax_lax_bitwise_and.rst
+   test_jax_lax_operators/test_jax_lax_bitwise_or.rst
+   test_jax_lax_operators/test_jax_lax_bitwise_not.rst
+   test_jax_lax_operators/test_jax_lax_neg.rst
+   test_jax_lax_operators/test_jax_lax_argmax.rst
+   test_jax_lax_operators/test_jax_lax_argmin.rst
+   test_jax_lax_operators/test_jax_lax_bitwise_xor.rst
+   test_jax_lax_operators/test_jax_lax_full_like.rst
+   test_jax_lax_operators/test_jax_lax_exp.rst
+   test_jax_lax_operators/test_jax_lax_convert_element_type.rst
+   test_jax_lax_operators/test_jax_lax_cumprod.rst
+   test_jax_lax_operators/test_jax_lax_cumsum.rst
+   test_jax_lax_operators/test_jax_lax_ge.rst
+   test_jax_lax_operators/test_jax_lax_reshape.rst
+   test_jax_lax_operators/test_jax_lax_broadcast.rst
+   test_jax_lax_operators/test_jax_lax_reciprocal.rst
+   test_jax_lax_operators/test_jax_lax_sort.rst
+   test_jax_lax_operators/test_jax_lax_le.rst
+   test_jax_lax_operators/test_jax_lax_ne.rst
+   test_jax_lax_operators/test_jax_lax_cosh.rst
+   test_jax_lax_operators/test_jax_lax_lt.rst
+   test_jax_lax_operators/test_jax_lax_round.rst
+   test_jax_lax_operators/test_jax_lax_pow.rst
+   test_jax_lax_operators/test_jax_lax_gt.rst
+   test_jax_lax_operators/test_jax_lax_cos.rst
+   test_jax_lax_operators/test_jax_lax_clamp.rst
+   test_jax_lax_operators/test_jax_lax_log.rst
+   test_jax_lax_operators/test_jax_lax_rev.rst
+   test_jax_lax_operators/test_jax_lax_div.rst
+   test_jax_lax_operators/test_jax_lax_rsqrt.rst
+   test_jax_lax_operators/test_jax_lax_expm1.rst
+   test_jax_lax_operators/test_jax_lax_log1p.rst
+   test_jax_lax_operators/test_jax_lax_transpose.rst
+   test_jax_lax_operators/test_jax_lax_dot.rst
+   test_jax_lax_operators/test_jax_lax_conv.rst
+   test_jax_lax_operators/test_jax_lax_conv_transpose.rst
+   test_jax_lax_operators/test_jax_lax_sub.rst
+   test_jax_lax_operators/test_jax_lax_rem.rst
+   test_jax_lax_operators/test_jax_lax_square.rst
+   test_jax_lax_operators/test_jax_lax_erf.rst
+

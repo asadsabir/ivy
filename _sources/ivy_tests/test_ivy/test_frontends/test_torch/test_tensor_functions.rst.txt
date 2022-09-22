@@ -1,0 +1,17 @@
+Test tensor functions
+=====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_tensor_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test tensor functions
+
+   test_tensor_functions/test_torch_is_tensor.rst
+

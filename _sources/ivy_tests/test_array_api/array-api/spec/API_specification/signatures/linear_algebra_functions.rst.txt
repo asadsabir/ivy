@@ -1,0 +1,20 @@
+Linear algebra functions
+========================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.linear_algebra_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Linear algebra functions
+
+   linear_algebra_functions/matmul.rst
+   linear_algebra_functions/matrix_transpose.rst
+   linear_algebra_functions/tensordot.rst
+   linear_algebra_functions/vecdot.rst
+

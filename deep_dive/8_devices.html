@@ -117,6 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../stateful/activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stateful/sequential.html">Sequential</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Ivy tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivy_tests/test_array_api.html">Test array api</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivy_tests/test_ivy.html">Test ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivy_tests/conftest.html">Conftest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivy_tests/test_docstrings.html">Test docstrings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivy_tests/write_array_api_tests_k_flag.html">Write array api tests k flag</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivy"">Ivy</a></li>
@@ -164,7 +172,7 @@
 <li><p>gpu:idx</p></li>
 <li><p>tpu:idx</p></li>
 </ul>
-<p>In a similar manner to the <code class="code docutils literal notranslate"><span class="pre">ivy.Dtype</span></code> and <code class="code docutils literal notranslate"><span class="pre">ivy.NativeDtype</span></code> classes (see <a class="reference internal" href="7_data_types.html#data-types"><span class="std std-ref">Data Types</span></a>),
+<p>In a similar manner to the <code class="code docutils literal notranslate"><span class="pre">ivy.Dtype</span></code> and <code class="code docutils literal notranslate"><span class="pre">ivy.NativeDtype</span></code> classes (see <a class="reference internal" href="../ivy_tests/test_array_api/array-api/spec/API_specification/signatures/data_types.html#data-types"><span class="std std-ref">Data types</span></a>),
 there is both an <a class="reference external" href="https://github.com/unifyai/ivy/blob/0b89c7fa050db13ef52b0d2a3e1a5fb801a19fa2/ivy/__init__.py#L42">ivy.Device</a> class and an <code class="code docutils literal notranslate"><span class="pre">ivy.NativeDevice</span></code> class,
 with <code class="code docutils literal notranslate"><span class="pre">ivy.NativeDevice</span></code> initially set as an <a class="reference external" href="https://github.com/unifyai/ivy/blob/0b89c7fa050db13ef52b0d2a3e1a5fb801a19fa2/ivy/__init__.py#L34">empty class</a>.
 The <code class="code docutils literal notranslate"><span class="pre">ivy.Device</span></code> class derives from <code class="code docutils literal notranslate"><span class="pre">str</span></code>,
@@ -220,7 +228,7 @@ before the backend-specific implementation is even entered into. Therefore, wher
 listed as optional in the ivy API at <code class="code docutils literal notranslate"><span class="pre">ivy/functional/ivy/category_name.py</span></code>,
 the argument is listed as required in the backend-specific implementations at
 <code class="code docutils literal notranslate"><span class="pre">ivy/functional/backends/backend_name/category_name.py</span></code>.</p>
-<p>This is exactly the same as with the <code class="code docutils literal notranslate"><span class="pre">dtype</span></code> argument, as explained in the <a class="reference internal" href="7_data_types.html#data-types"><span class="std std-ref">Data Types</span></a> section.</p>
+<p>This is exactly the same as with the <code class="code docutils literal notranslate"><span class="pre">dtype</span></code> argument, as explained in the <a class="reference internal" href="../ivy_tests/test_array_api/array-api/spec/API_specification/signatures/data_types.html#data-types"><span class="std std-ref">Data types</span></a> section.</p>
 <p>Let’s take a look at the function <code class="code docutils literal notranslate"><span class="pre">ivy.zeros</span></code> as an example.</p>
 <p>The implementation in <code class="code docutils literal notranslate"><span class="pre">ivy/functional/ivy/creation.py</span></code> has the following signature:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@outputs_to_ivy_arrays</span>

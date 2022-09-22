@@ -1,0 +1,24 @@
+Test initializers
+=================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_stateful.test_initializers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test initializers
+
+   test_initializers/test_constant.rst
+   test_initializers/test_zeros.rst
+   test_initializers/test_ones.rst
+   test_initializers/test_uniform.rst
+   test_initializers/test_glorot_uniform.rst
+   test_initializers/test_first_layer_siren.rst
+   test_initializers/test_siren.rst
+   test_initializers/test_kaiming_normal.rst
+

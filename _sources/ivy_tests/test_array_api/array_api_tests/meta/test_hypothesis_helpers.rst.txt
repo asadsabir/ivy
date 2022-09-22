@@ -1,0 +1,28 @@
+Test hypothesis helpers
+=======================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_hypothesis_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test hypothesis helpers
+
+   test_hypothesis_helpers/test_mutually_promotable_dtypes.rst
+   test_hypothesis_helpers/test_partial_mutually_promotable_dtypes.rst
+   test_hypothesis_helpers/valid_shape.rst
+   test_hypothesis_helpers/test_shapes.rst
+   test_hypothesis_helpers/test_two_mutually_broadcastable_shapes.rst
+   test_hypothesis_helpers/test_two_broadcastable_shapes.rst
+   test_hypothesis_helpers/test_two_mutual_arrays.rst
+   test_hypothesis_helpers/test_two_mutual_arrays_raises_on_bad_dtypes.rst
+   test_hypothesis_helpers/test_kwargs.rst
+   test_hypothesis_helpers/test_specified_kwargs.rst
+   test_hypothesis_helpers/test_symmetric_matrices.rst
+   test_hypothesis_helpers/test_positive_definite_matrices.rst
+

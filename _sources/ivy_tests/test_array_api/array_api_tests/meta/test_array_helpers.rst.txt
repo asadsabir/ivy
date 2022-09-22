@@ -1,0 +1,18 @@
+Test array helpers
+==================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_array_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test array helpers
+
+   test_array_helpers/test_exactly_equal.rst
+   test_array_helpers/test_notequal.rst
+

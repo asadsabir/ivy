@@ -1,0 +1,8 @@
+Test frontends
+==============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

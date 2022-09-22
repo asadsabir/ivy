@@ -1,0 +1,23 @@
+Test type promotion
+===================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_type_promotion
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test type promotion
+
+   test_type_promotion/make_id.rst
+   test_type_promotion/mark_stubbed_dtypes.rst
+   test_type_promotion/test_func_promotion.rst
+   test_type_promotion/test_op_promotion.rst
+   test_type_promotion/test_inplace_op_promotion.rst
+   test_type_promotion/test_op_scalar_promotion.rst
+   test_type_promotion/test_inplace_op_scalar_promotion.rst
+

@@ -1,0 +1,8 @@
+Array-api
+=========
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

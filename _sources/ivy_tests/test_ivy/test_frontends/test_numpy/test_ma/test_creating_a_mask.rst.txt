@@ -1,0 +1,16 @@
+Test creating a mask
+====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_ma.test_creating_a_mask
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test creating a mask
+
+

@@ -1,0 +1,17 @@
+Test averages and variances
+===========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_statistics.test_averages_and_variances
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test averages and variances
+
+   test_averages_and_variances/test_numpy_mean.rst
+

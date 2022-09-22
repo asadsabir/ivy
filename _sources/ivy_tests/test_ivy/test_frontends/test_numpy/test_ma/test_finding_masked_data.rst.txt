@@ -1,0 +1,16 @@
+Test finding masked data
+========================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_ma.test_finding_masked_data
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test finding masked data
+
+

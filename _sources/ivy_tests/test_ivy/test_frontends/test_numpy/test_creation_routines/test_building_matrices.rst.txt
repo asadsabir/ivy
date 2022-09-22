@@ -1,0 +1,17 @@
+Test building matrices
+======================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_creation_routines.test_building_matrices
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test building matrices
+
+   test_building_matrices/test_numpy_tril.rst
+

@@ -1,0 +1,19 @@
+Test tensor
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_tensor
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test tensor
+
+   test_tensor/test_torch_instance_add.rst
+   test_tensor/dtypes_x_reshape.rst
+   test_tensor/test_torch_instance_reshape.rst
+

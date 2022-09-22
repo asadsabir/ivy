@@ -1,0 +1,26 @@
+Test reduction ops
+==================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_reduction_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test reduction ops
+
+   test_reduction_ops/statistical_dtype_values.rst
+   test_reduction_ops/test_torch_argmax.rst
+   test_reduction_ops/test_torch_argmin.rst
+   test_reduction_ops/test_torch_amax.rst
+   test_reduction_ops/test_torch_amin.rst
+   test_reduction_ops/test_torch_all.rst
+   test_reduction_ops/test_torch_any.rst
+   test_reduction_ops/test_torch_mean.rst
+   test_reduction_ops/test_torch_std.rst
+   test_reduction_ops/test_torch_prod.rst
+

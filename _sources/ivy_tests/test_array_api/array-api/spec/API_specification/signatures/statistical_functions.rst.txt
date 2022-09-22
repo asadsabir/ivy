@@ -1,0 +1,23 @@
+Statistical functions
+=====================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.statistical_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Statistical functions
+
+   statistical_functions/max.rst
+   statistical_functions/mean.rst
+   statistical_functions/min.rst
+   statistical_functions/prod.rst
+   statistical_functions/std.rst
+   statistical_functions/sum.rst
+   statistical_functions/var.rst
+

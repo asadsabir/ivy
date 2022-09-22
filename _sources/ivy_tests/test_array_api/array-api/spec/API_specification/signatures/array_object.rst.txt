@@ -1,0 +1,17 @@
+Array object
+============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.array_object
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Array object
+
+   array_object/_array.rst
+

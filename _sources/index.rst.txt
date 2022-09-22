@@ -352,6 +352,19 @@ Citation
 .. toctree::
    :hidden:
    :maxdepth: -1
+   :caption: Ivy tests
+
+   ivy_tests/array_api_methods_to_test.rst
+   ivy_tests/test_array_api.rst
+   ivy_tests/test_ivy.rst
+   ivy_tests/conftest.rst
+   ivy_tests/test_docstrings.rst
+   ivy_tests/write_array_api_tests_k_flag.rst
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
    :caption: Docs
 
    docs/ivy.rst

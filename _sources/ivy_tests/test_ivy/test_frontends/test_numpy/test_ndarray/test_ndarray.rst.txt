@@ -1,0 +1,19 @@
+Test ndarray
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_ndarray.test_ndarray
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test ndarray
+
+   test_ndarray/dtypes_x_reshape.rst
+   test_ndarray/test_numpy_instance_reshape.rst
+   test_ndarray/test_numpy_instance_add.rst
+

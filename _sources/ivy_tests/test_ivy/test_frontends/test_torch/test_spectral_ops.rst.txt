@@ -1,0 +1,16 @@
+Test spectral ops
+=================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_torch.test_spectral_ops
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test spectral ops
+
+

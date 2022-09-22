@@ -1,0 +1,26 @@
+Shape helpers
+=============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.shape_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Shape helpers
+
+   shape_helpers/broadcast_shapes.rst
+   shape_helpers/normalise_axis.rst
+   shape_helpers/ndindex.rst
+   shape_helpers/iter_indices.rst
+   shape_helpers/axis_ndindex.rst
+   shape_helpers/axes_ndindex.rst
+   shape_helpers/reshape.rst
+   shape_helpers/fmt_i.rst
+   shape_helpers/fmt_idx.rst
+   shape_helpers/BroadcastError.rst
+

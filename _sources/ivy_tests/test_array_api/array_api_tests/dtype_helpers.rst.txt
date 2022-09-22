@@ -1,0 +1,23 @@
+Dtype helpers
+=============
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.dtype_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Dtype helpers
+
+   dtype_helpers/is_int_dtype.rst
+   dtype_helpers/is_float_dtype.rst
+   dtype_helpers/get_scalar_type.rst
+   dtype_helpers/result_type.rst
+   dtype_helpers/fmt_types.rst
+   dtype_helpers/EqualityMapping.rst
+   dtype_helpers/MinMax.rst
+

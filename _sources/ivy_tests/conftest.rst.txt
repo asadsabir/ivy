@@ -1,0 +1,17 @@
+Conftest
+========
+
+.. automodule:: ivy.ivy_tests.conftest
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Conftest
+
+   conftest/pytest_collection_modifyitems.rst
+

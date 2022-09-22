@@ -1,0 +1,19 @@
+Test sorting functions
+======================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_sorting_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test sorting functions
+
+   test_sorting_functions/assert_scalar_in_set.rst
+   test_sorting_functions/test_argsort.rst
+   test_sorting_functions/test_sort.rst
+

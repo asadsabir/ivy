@@ -1,0 +1,55 @@
+Test special cases
+==================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.test_special_cases
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test special cases
+
+   test_special_cases/make_strict_eq.rst
+   test_special_cases/make_strict_neq.rst
+   test_special_cases/make_rough_eq.rst
+   test_special_cases/make_gt.rst
+   test_special_cases/make_lt.rst
+   test_special_cases/make_or.rst
+   test_special_cases/make_and.rst
+   test_special_cases/make_not_cond.rst
+   test_special_cases/absify_cond.rst
+   test_special_cases/parse_value.rst
+   test_special_cases/wrap_strat_as_from_dtype.rst
+   test_special_cases/parse_cond.rst
+   test_special_cases/parse_result.rst
+   test_special_cases/integers_from_dtype.rst
+   test_special_cases/trailing_halves_from_dtype.rst
+   test_special_cases/make_unary_check_result.rst
+   test_special_cases/parse_unary_case_block.rst
+   test_special_cases/noop.rst
+   test_special_cases/make_binary_cond.rst
+   test_special_cases/make_eq_input_check_result.rst
+   test_special_cases/make_binary_check_result.rst
+   test_special_cases/parse_binary_case.rst
+   test_special_cases/parse_binary_case_block.rst
+   test_special_cases/test_unary.rst
+   test_special_cases/test_binary.rst
+   test_special_cases/test_iop.rst
+   test_special_cases/test_empty_arrays.rst
+   test_special_cases/test_nan_propagation.rst
+   test_special_cases/ParseError.rst
+   test_special_cases/FromDtypeFunc.rst
+   test_special_cases/BoundFromDtype.rst
+   test_special_cases/Case.rst
+   test_special_cases/UnaryCond.rst
+   test_special_cases/UnaryResultCheck.rst
+   test_special_cases/UnaryCase.rst
+   test_special_cases/BinaryCond.rst
+   test_special_cases/BinaryResultCheck.rst
+   test_special_cases/BinaryCase.rst
+   test_special_cases/BinaryCondArg.rst
+

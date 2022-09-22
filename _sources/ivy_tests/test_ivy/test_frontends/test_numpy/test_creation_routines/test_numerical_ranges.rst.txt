@@ -1,0 +1,22 @@
+Test numerical ranges
+=====================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_creation_routines.test_numerical_ranges
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test numerical ranges
+
+   test_numerical_ranges/test_numpy_arange.rst
+   test_numerical_ranges/test_numpy_linspace.rst
+   test_numerical_ranges/test_numpy_logspace.rst
+   test_numerical_ranges/test_numpy_meshgrid.rst
+   test_numerical_ranges/test_numpy_mgrid.rst
+   test_numerical_ranges/test_numpy_ogrid.rst
+

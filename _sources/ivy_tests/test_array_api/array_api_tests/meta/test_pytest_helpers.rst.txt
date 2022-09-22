@@ -1,0 +1,18 @@
+Test pytest helpers
+===================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta.test_pytest_helpers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test pytest helpers
+
+   test_pytest_helpers/test_assert_dtype.rst
+   test_pytest_helpers/test_assert_array_elements.rst
+

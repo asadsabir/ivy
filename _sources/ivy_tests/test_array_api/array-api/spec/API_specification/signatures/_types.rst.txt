@@ -1,0 +1,32 @@
+ types
+======
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures._types
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption:  types
+
+   _types/finfo_object:
+    bits: int
+    eps: float
+    max: float
+    min: float
+    smallest_normal: float
+
+@dataclass.rst
+   _types/iinfo_object:
+    bits: int
+    max: int
+    min: int
+
+
+_T_co = TypeVar.rst
+   _types/NestedSequence.rst
+

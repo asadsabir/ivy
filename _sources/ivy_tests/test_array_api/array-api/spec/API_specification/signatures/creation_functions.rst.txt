@@ -1,0 +1,32 @@
+Creation functions
+==================
+
+.. automodule:: ivy.ivy_tests.test_array_api.array-api.spec.API_specification.signatures.creation_functions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Creation functions
+
+   creation_functions/arange.rst
+   creation_functions/asarray.rst
+   creation_functions/empty.rst
+   creation_functions/empty_like.rst
+   creation_functions/eye.rst
+   creation_functions/from_dlpack.rst
+   creation_functions/full.rst
+   creation_functions/full_like.rst
+   creation_functions/linspace.rst
+   creation_functions/meshgrid.rst
+   creation_functions/ones.rst
+   creation_functions/ones_like.rst
+   creation_functions/tril.rst
+   creation_functions/triu.rst
+   creation_functions/zeros.rst
+   creation_functions/zeros_like.rst
+

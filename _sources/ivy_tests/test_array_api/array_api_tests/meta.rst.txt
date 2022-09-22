@@ -1,0 +1,8 @@
+Meta
+====
+
+.. automodule:: ivy.ivy_tests.test_array_api.array_api_tests.meta
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

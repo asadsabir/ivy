@@ -1,0 +1,17 @@
+Test sorting
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_sorting_searching_counting.test_sorting
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test sorting
+
+   test_sorting/test_numpy_argsort.rst
+

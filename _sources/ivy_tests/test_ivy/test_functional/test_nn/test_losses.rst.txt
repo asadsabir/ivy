@@ -1,0 +1,19 @@
+Test losses
+===========
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_nn.test_losses
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test losses
+
+   test_losses/test_cross_entropy.rst
+   test_losses/test_binary_cross_entropy.rst
+   test_losses/test_sparse_cross_entropy.rst
+

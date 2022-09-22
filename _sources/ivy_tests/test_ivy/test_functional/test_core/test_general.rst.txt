@@ -1,0 +1,79 @@
+Test general
+============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_general
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test general
+
+   test_general/test_set_framework.rst
+   test_general/test_use_within_use_framework.rst
+   test_general/test_match_kwargs.rst
+   test_general/test_get_referrers_recursive.rst
+   test_general/test_array_equal.rst
+   test_general/test_arrays_equal.rst
+   test_general/test_get_item.rst
+   test_general/test_to_numpy.rst
+   test_general/test_to_scalar.rst
+   test_general/test_to_list.rst
+   test_general/test_shape.rst
+   test_general/test_get_num_dims.rst
+   test_general/test_clip_vector_norm.rst
+   test_general/test_scatter_flat.rst
+   test_general/test_scatter_nd.rst
+   test_general/test_gather.rst
+   test_general/array_and_ndindices.rst
+   test_general/test_gather_nd.rst
+   test_general/test_exists.rst
+   test_general/test_default.rst
+   test_general/test_cache_fn.rst
+   test_general/test_cache_fn_with_args.rst
+   test_general/test_framework_setting_with_threading.rst
+   test_general/test_framework_setting_with_multiprocessing.rst
+   test_general/test_explicit_ivy_framework_handles.rst
+   test_general/test_einops_rearrange.rst
+   test_general/test_einops_reduce.rst
+   test_general/test_einops_repeat.rst
+   test_general/test_container_types.rst
+   test_general/test_inplace_arrays_supported.rst
+   test_general/test_inplace_variables_supported.rst
+   test_general/test_inplace_update.rst
+   test_general/test_inplace_decrement.rst
+   test_general/test_inplace_increment.rst
+   test_general/test_is_ivy_array.rst
+   test_general/test_is_array.rst
+   test_general/test_is_ivy_container.rst
+   test_general/test_all_equal.rst
+   test_general/test_clip_matrix_norm.rst
+   test_general/test_value_is_nan.rst
+   test_general/test_has_nans.rst
+   test_general/test_try_else_none.rst
+   test_general/test_arg_names.rst
+   test_general/test_function_supported_device_and_dtype.rst
+   test_general/test_function_unsupported_devices.rst
+   test_general/test_current_backend_str.rst
+   test_general/test_get_min_denominator.rst
+   test_general/test_set_min_denominator.rst
+   test_general/test_get_min_base.rst
+   test_general/test_set_min_base.rst
+   test_general/test_stable_divide.rst
+   test_general/test_stable_pow.rst
+   test_general/test_get_all_arrays_in_memory.rst
+   test_general/test_num_arrays_in_memory.rst
+   test_general/test_print_all_arrays_in_memory.rst
+   test_general/test_set_queue_timeout.rst
+   test_general/test_get_queue_timeout.rst
+   test_general/test_get_tmp_dir.rst
+   test_general/test_set_tmp_dir.rst
+   test_general/test_supports_inplace_updates.rst
+   test_general/test_assert_supports_inplace.rst
+   test_general/test_arg_info.rst
+   test_general/test_vmap.rst
+

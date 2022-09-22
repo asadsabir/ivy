@@ -1,0 +1,8 @@
+Test functional
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:

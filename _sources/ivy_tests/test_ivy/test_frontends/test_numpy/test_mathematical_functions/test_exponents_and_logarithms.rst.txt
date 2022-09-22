@@ -1,0 +1,23 @@
+Test exponents and logarithms
+=============================
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_frontends.test_numpy.test_mathematical_functions.test_exponents_and_logarithms
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test exponents and logarithms
+
+   test_exponents_and_logarithms/test_numpy_expm1.rst
+   test_exponents_and_logarithms/test_numpy_exp2.rst
+   test_exponents_and_logarithms/test_numpy_log10.rst
+   test_exponents_and_logarithms/test_numpy_log.rst
+   test_exponents_and_logarithms/test_numpy_log2.rst
+   test_exponents_and_logarithms/test_numpy_log1p.rst
+   test_exponents_and_logarithms/test_numpy_logaddexp.rst
+

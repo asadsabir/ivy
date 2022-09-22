@@ -1,0 +1,36 @@
+Test creation
+=============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_core.test_creation
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test creation
+
+   test_creation/test_native_array.rst
+   test_creation/test_linspace.rst
+   test_creation/test_logspace.rst
+   test_creation/test_arange.rst
+   test_creation/test_asarray.rst
+   test_creation/test_empty.rst
+   test_creation/test_empty_like.rst
+   test_creation/test_eye.rst
+   test_creation/test_from_dlpack.rst
+   test_creation/test_full.rst
+   test_creation/test_full_like.rst
+   test_creation/test_meshgrid.rst
+   test_creation/test_ones.rst
+   test_creation/test_ones_like.rst
+   test_creation/test_tril.rst
+   test_creation/test_triu.rst
+   test_creation/test_zeros.rst
+   test_creation/test_zeros_like.rst
+   test_creation/test_copy_array.rst
+   test_creation/test_one_hot.rst
+

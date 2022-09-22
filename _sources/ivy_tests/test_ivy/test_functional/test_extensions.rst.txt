@@ -1,0 +1,16 @@
+Test extensions
+===============
+
+.. automodule:: ivy.ivy_tests.test_ivy.test_functional.test_extensions
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Test extensions
+
+
