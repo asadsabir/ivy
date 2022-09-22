@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ivy.ivy_tests.test_ivy.test_functional.test_core.test_device &mdash; Ivy 1.0 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> Ivy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../deep_dive.html">Deep Dive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/compilation.html">Compilation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/constants.html">Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/data_type.html">Data type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/meta.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/nest.html">Nest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/utility.html">Utility</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_classes/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_classes/array.html">Array</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/converters.html">Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/optimizers.html">Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/sequential.html">Sequential</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ivy tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_array_api.html">Test array api</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_ivy.html">Test ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/conftest.html">Conftest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_docstrings.html">Test docstrings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/write_array_api_tests_k_flag.html">Write array api tests k flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ecosystem"">Ivy ecosystem</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Ivy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+      <li>ivy.ivy_tests.test_ivy.test_functional.test_core.test_device</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for ivy.ivy_tests.test_ivy.test_functional.test_core.test_device</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Collection of tests for unified device functions.&quot;&quot;&quot;</span>
+
+<span class="c1"># global</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pynvml</span>
+<span class="kn">import</span> <span class="nn">psutil</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">hypothesis</span> <span class="kn">import</span> <span class="n">strategies</span> <span class="k">as</span> <span class="n">st</span><span class="p">,</span> <span class="n">given</span><span class="p">,</span> <span class="n">assume</span>
+
+<span class="c1"># local</span>
+<span class="kn">import</span> <span class="nn">ivy</span>
+<span class="kn">import</span> <span class="nn">ivy_tests.test_ivy.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
+<span class="kn">from</span> <span class="nn">ivy_tests.test_ivy.helpers</span> <span class="kn">import</span> <span class="n">handle_cmd_line_args</span>
+
+
+<span class="c1"># Helpers #</span>
+<span class="c1"># ------- #</span>
+
+
+<span class="k">def</span> <span class="nf">_ram_array_and_clear_test</span><span class="p">(</span><span class="n">metric_fn</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000000</span><span class="p">):</span>
+    <span class="c1"># This function checks if the memory usage changes before, during and after</span>
+
+    <span class="c1"># Measure usage before creating array</span>
+    <span class="n">before</span> <span class="o">=</span> <span class="n">metric_fn</span><span class="p">()</span>
+    <span class="c1"># Create an array of floats, by default with 10 million elements (40 MB)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">size</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+    <span class="n">during</span> <span class="o">=</span> <span class="n">metric_fn</span><span class="p">()</span>
+    <span class="c1"># Check that the memory usage has increased</span>
+    <span class="k">assert</span> <span class="n">before</span> <span class="o">&lt;</span> <span class="n">during</span>
+
+    <span class="c1"># Delete the array</span>
+    <span class="k">del</span> <span class="n">arr</span>
+    <span class="c1"># Measure the memory usage after the array is deleted</span>
+    <span class="n">after</span> <span class="o">=</span> <span class="n">metric_fn</span><span class="p">()</span>
+    <span class="c1"># Check that the memory usage has decreased</span>
+    <span class="k">assert</span> <span class="n">during</span> <span class="o">&gt;</span> <span class="n">after</span>
+
+
+<span class="k">def</span> <span class="nf">_get_possible_devices</span><span class="p">():</span>
+    <span class="c1"># Return all the possible usable devices</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cpu&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">gpu_is_available</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">num_gpus</span><span class="p">()):</span>
+            <span class="n">devices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;gpu:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+    <span class="c1"># Return a list of ivy devices</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">,</span> <span class="n">devices</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">_empty_dir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recreate</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="c1"># Delete the directory if it exists and create it again if recreate is True</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">recreate</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+
+<span class="c1"># Tests #</span>
+<span class="c1"># ------#</span>
+
+<span class="c1"># Device Queries #</span>
+
+<span class="c1"># dev</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_dev</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="n">assume</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">fw</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span> <span class="ow">and</span> <span class="s2">&quot;int&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">_get_possible_devices</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># type test</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="c1"># value test</span>
+        <span class="k">assert</span> <span class="n">ret</span> <span class="o">==</span> <span class="n">device</span>
+        <span class="c1"># array instance test</span>
+        <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">dev</span><span class="p">()</span> <span class="o">==</span> <span class="n">device</span>
+        <span class="c1"># container instance test</span>
+        <span class="n">container_x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">})</span>
+        <span class="k">assert</span> <span class="n">container_x</span><span class="o">.</span><span class="n">dev</span><span class="p">()</span> <span class="o">==</span> <span class="n">device</span>
+        <span class="c1"># container static test</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="o">.</span><span class="n">static_dev</span><span class="p">(</span><span class="n">container_x</span><span class="p">)</span> <span class="o">==</span> <span class="n">device</span>
+
+
+<span class="c1"># as_ivy_dev</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_as_ivy_dev</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="n">assume</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">fw</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span> <span class="ow">and</span> <span class="s2">&quot;int&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">))</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">_get_possible_devices</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">native_device</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">as_ivy_dev</span><span class="p">(</span><span class="n">native_device</span><span class="p">)</span>
+
+        <span class="c1"># Type test</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="c1"># Value test</span>
+        <span class="k">assert</span> <span class="n">ret</span> <span class="o">==</span> <span class="n">device</span>
+
+
+<span class="c1"># as_native_dev</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_as_native_dev</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">_get_possible_devices</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">device</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">as_native_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">as_native_dev</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="c1"># value test</span>
+        <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;tensorflow&quot;</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span> <span class="o">==</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">device</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">ret</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">device</span><span class="o">.</span><span class="n">type</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">ret</span> <span class="o">==</span> <span class="n">device</span>
+
+
+<span class="c1"># memory_on_dev</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_memory_on_dev</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">_get_possible_devices</span><span class="p">():</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">total_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="c1"># type test</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="c1"># value test</span>
+        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">64</span>
+        <span class="c1"># compilation test</span>
+        <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span><span class="p">:</span>
+            <span class="c1"># global variables aren&#39;t supported for pytorch scripting</span>
+            <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">()</span>
+
+
+<span class="c1"># Device Allocation #</span>
+
+<span class="c1"># default_device</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_default_device</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
+    <span class="c1"># setting and unsetting</span>
+    <span class="n">orig_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">set_default_device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">set_default_device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_device</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_device</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span>
+
+    <span class="c1"># with</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span>
+    <span class="k">with</span> <span class="n">ivy</span><span class="o">.</span><span class="n">DefaultDevice</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">with</span> <span class="n">ivy</span><span class="o">.</span><span class="n">DefaultDevice</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_device_stack</span><span class="p">)</span> <span class="o">==</span> <span class="n">orig_len</span>
+
+
+<span class="c1"># to_dev</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">stream</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">50</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_to_device</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">with_out</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span>
+    <span class="n">assume</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">fw</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span> <span class="ow">and</span> <span class="s2">&quot;int&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">))</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="c1"># create a dummy array for out that is broadcastable to x</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span> <span class="k">if</span> <span class="n">with_out</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="n">device</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x_on_dev</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_device</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
+    <span class="n">dev_from_new_x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x_on_dev</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">with_out</span><span class="p">:</span>
+        <span class="c1"># should be the same array test</span>
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">x_on_dev</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+
+        <span class="c1"># should be the same device</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">x_on_dev</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">dev</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># check if native arrays are the same</span>
+        <span class="c1"># these backends do not support native inplace updates</span>
+        <span class="n">assume</span><span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">fw</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;tensorflow&quot;</span><span class="p">,</span> <span class="s2">&quot;jax&quot;</span><span class="p">]))</span>
+
+        <span class="k">assert</span> <span class="n">x_on_dev</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="n">out</span><span class="o">.</span><span class="n">data</span>
+
+    <span class="c1"># value test</span>
+    <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;tensorflow&quot;</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dev_from_new_x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span> <span class="o">==</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">device</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;torch&quot;</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">dev_from_new_x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">dev_from_new_x</span> <span class="o">==</span> <span class="n">device</span>
+
+    <span class="c1"># array instance test</span>
+    <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">to_device</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">dev</span><span class="p">()</span> <span class="o">==</span> <span class="n">device</span>
+    <span class="c1"># container instance test</span>
+    <span class="n">container_x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">})</span>
+    <span class="k">assert</span> <span class="n">container_x</span><span class="o">.</span><span class="n">to_device</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">dev</span><span class="p">()</span> <span class="o">==</span> <span class="n">device</span>
+    <span class="c1"># container static test</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="o">.</span><span class="n">to_device</span><span class="p">(</span><span class="n">container_x</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">dev</span><span class="p">()</span> <span class="o">==</span> <span class="n">device</span>
+
+
+<span class="c1"># Function Splitting #</span>
+
+
+<span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">_axis</span><span class="p">(</span><span class="n">draw</span><span class="p">):</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="n">max_val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">chunk_size</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+    <span class="n">axis</span><span class="o">=</span><span class="n">_axis</span><span class="p">(),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_split_func_call</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">device</span>
+<span class="p">):</span>
+    <span class="c1"># inputs</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+
+    <span class="c1"># function</span>
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">t1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">t0</span> <span class="o">*</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t0</span> <span class="o">-</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t1</span> <span class="o">-</span> <span class="n">t0</span>
+
+    <span class="c1"># predictions</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">split_func_call</span><span class="p">(</span>
+        <span class="n">func</span><span class="p">,</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">],</span> <span class="s2">&quot;concat&quot;</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">input_axes</span><span class="o">=</span><span class="n">axis</span>
+    <span class="p">)</span>
+
+    <span class="c1"># true</span>
+    <span class="n">a_true</span><span class="p">,</span> <span class="n">b_true</span><span class="p">,</span> <span class="n">c_true</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+
+    <span class="c1"># value test</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">a_true</span><span class="p">))</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">b_true</span><span class="p">))</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">c_true</span><span class="p">))</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+        <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+        <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">chunk_size</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+    <span class="n">axis</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_split_func_call_with_cont_input</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span> <span class="n">array_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">as_variable</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">device</span>
+<span class="p">):</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">array_shape</span><span class="p">)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+    <span class="c1"># inputs</span>
+
+    <span class="k">if</span> <span class="n">as_variable</span><span class="p">:</span>
+        <span class="n">in0</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">cont_key</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+        <span class="n">in1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">cont_key</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">in0</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">cont_key</span><span class="o">=</span><span class="n">x1</span><span class="p">)</span>
+        <span class="n">in1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">cont_key</span><span class="o">=</span><span class="n">x2</span><span class="p">)</span>
+
+    <span class="c1"># function</span>
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">t1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">t0</span> <span class="o">*</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t0</span> <span class="o">-</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t1</span> <span class="o">-</span> <span class="n">t0</span>
+
+    <span class="c1"># predictions</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">split_func_call</span><span class="p">(</span>
+        <span class="n">func</span><span class="p">,</span> <span class="p">[</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">],</span> <span class="s2">&quot;concat&quot;</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">input_axes</span><span class="o">=</span><span class="n">axis</span>
+    <span class="p">)</span>
+
+    <span class="c1"># true</span>
+    <span class="n">a_true</span><span class="p">,</span> <span class="n">b_true</span><span class="p">,</span> <span class="n">c_true</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">)</span>
+
+    <span class="c1"># value test</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">cont_key</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">a_true</span><span class="o">.</span><span class="n">cont_key</span><span class="p">))</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">cont_key</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">b_true</span><span class="o">.</span><span class="n">cont_key</span><span class="p">))</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">assert_all_close</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">cont_key</span><span class="p">),</span> <span class="n">ivy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">c_true</span><span class="o">.</span><span class="n">cont_key</span><span class="p">))</span>
+
+
+<span class="c1"># profiler</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_profiler</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="c1"># ToDo: find way to prevent this test from hanging when run</span>
+    <span class="c1">#  alongside other tests in parallel</span>
+
+    <span class="c1"># log dir, each framework uses their own folder,</span>
+    <span class="c1"># so we can run this test in parallel</span>
+    <span class="n">this_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+    <span class="n">log_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_dir</span><span class="p">,</span> <span class="s2">&quot;../log&quot;</span><span class="p">)</span>
+    <span class="n">fw_log_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log_dir</span><span class="p">,</span> <span class="n">fw</span><span class="p">)</span>
+
+    <span class="c1"># Remove old content and recreate log dir</span>
+    <span class="n">_empty_dir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># with statement</span>
+    <span class="k">with</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Profiler</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">])</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">])</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+    <span class="c1"># Should have content in folder</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Profiler did not log anything&quot;</span>
+
+    <span class="c1"># Remove old content and recreate log dir</span>
+    <span class="n">_empty_dir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Profiler should stop log</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Profiler logged something while stopped&quot;</span>
+
+    <span class="c1"># start and stop methods</span>
+    <span class="n">profiler</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Profiler</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">)</span>
+    <span class="n">profiler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="n">profiler</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+    <span class="c1"># Should have content in folder</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Profiler did not log anything&quot;</span>
+
+    <span class="c1"># Remove old content including the logging folder</span>
+    <span class="n">_empty_dir</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fw_log_dir</span><span class="p">),</span> <span class="s2">&quot;Profiler recreated logging folder&quot;</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">test_num_arrays_on_dev</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+    <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">num_ivy_arrays_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">item</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">test_get_all_arrays_on_dev</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+    <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">)]</span>
+    <span class="n">arr_ids_on_dev</span> <span class="o">=</span> <span class="p">[</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ivy</span><span class="o">.</span><span class="n">get_all_ivy_arrays_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">in</span> <span class="n">arr_ids_on_dev</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="n">attr_only</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">())</span>
+<span class="k">def</span> <span class="nf">test_print_all_ivy_arrays_on_dev</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">attr_only</span><span class="p">):</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">)]</span>
+
+    <span class="c1"># Flush to avoid artifact</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="c1"># temporarily redirect output to a buffer</span>
+    <span class="n">captured_output</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">captured_output</span>
+
+    <span class="n">ivy</span><span class="o">.</span><span class="n">print_all_ivy_arrays_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">attr_only</span><span class="o">=</span><span class="n">attr_only</span><span class="p">)</span>
+    <span class="c1"># Flush again to make sure all data is printed</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="n">written</span> <span class="o">=</span> <span class="n">captured_output</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="c1"># restore stdout</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+
+    <span class="c1"># Should have written same number of lines as the number of array in device</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">written</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span>
+
+    <span class="k">if</span> <span class="n">attr_only</span><span class="p">:</span>
+        <span class="c1"># Check that the attribute are printed are in the format of ((dim,...), type)</span>
+        <span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;^\(\((\d+,(\d,\d*)*)\), \&#39;\w*\&#39;\)$&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Check that the arrays are printed are in the format of ivy.array(...)</span>
+        <span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;^ivy\.array\(\[.*\]\)$&quot;</span>
+
+    <span class="c1"># Clear the array from device</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">item</span>
+
+    <span class="c1"># Apply the regex search</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">written</span><span class="p">])</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_total_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s2">&quot;cpu&quot;</span> <span class="ow">in</span> <span class="n">device</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">total_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="o">==</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">total</span> <span class="o">/</span> <span class="mf">1e9</span>
+    <span class="k">elif</span> <span class="s2">&quot;gpu&quot;</span> <span class="ow">in</span> <span class="n">device</span><span class="p">:</span>
+        <span class="n">gpu_mem</span> <span class="o">=</span> <span class="n">pynvml</span><span class="o">.</span><span class="n">nvmlDeviceGetMemoryInfo</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">total_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="o">==</span> <span class="n">gpu_mem</span> <span class="o">/</span> <span class="mf">1e9</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_used_mem_on_dev</span><span class="p">():</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="n">_get_possible_devices</span><span class="p">()</span>
+
+    <span class="c1"># Check that there not all memory is used</span>
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">used_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">used_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">total_mem_on_dev</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+    <span class="c1"># Testing if it&#39;s detects changes in RAM usage, cannot apply this to GPU, as we can</span>
+    <span class="c1"># only get the total memory usage of a GPU, not the usage by the program.</span>
+    <span class="n">_ram_array_and_clear_test</span><span class="p">(</span>
+        <span class="k">lambda</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">used_mem_on_dev</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">),</span> <span class="n">process_specific</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_percent_used_mem_on_dev</span><span class="p">():</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="n">_get_possible_devices</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="n">used</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">percent_used_mem_on_dev</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="n">device</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">used</span> <span class="o">&lt;=</span> <span class="mi">100</span>
+
+    <span class="c1"># Same as test_used_mem_on_dev, but using percent of total memory as metric function</span>
+    <span class="n">_ram_array_and_clear_test</span><span class="p">(</span>
+        <span class="k">lambda</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">percent_used_mem_on_dev</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">),</span> <span class="n">process_specific</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_gpu_is_available</span><span class="p">(</span><span class="n">fw</span><span class="p">):</span>
+    <span class="c1"># If gpu is available but cannot be initialised it will fail the test</span>
+    <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">gpu_is_available</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">pynvml</span><span class="o">.</span><span class="n">nvmlInit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">pynvml</span><span class="o">.</span><span class="n">NVMLError</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="kc">False</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_num_cpu_cores</span><span class="p">():</span>
+    <span class="c1"># using multiprocessing module too because ivy uses psutil as basis.</span>
+    <span class="n">p_cpu_cores</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+    <span class="n">m_cpu_cores</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">num_cpu_cores</span><span class="p">())</span> <span class="o">==</span> <span class="nb">int</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">num_cpu_cores</span><span class="p">()</span> <span class="o">==</span> <span class="n">p_cpu_cores</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">num_cpu_cores</span><span class="p">()</span> <span class="o">==</span> <span class="n">m_cpu_cores</span>
+
+
+<span class="k">def</span> <span class="nf">_composition_1</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">relu</span><span class="p">()</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_composition_2</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">floor</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">ceil</span><span class="p">()</span> <span class="ow">or</span> <span class="n">a</span>
+
+
+<span class="c1"># function_unsupported_devices</span>
+<div class="viewcode-block" id="test_function_supported_devices"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_device/test_function_supported_devices.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_device.test_function_supported_devices">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;func, expected&quot;</span><span class="p">,</span>
+    <span class="p">[(</span><span class="n">_composition_1</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cpu&quot;</span><span class="p">]),</span> <span class="p">(</span><span class="n">_composition_2</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cpu&quot;</span><span class="p">])],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_function_supported_devices</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">function_supported_devices</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
+
+
+<span class="c1"># function_unsupported_devices</span>
+<div class="viewcode-block" id="test_function_unsupported_devices"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_device/test_function_unsupported_devices.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_device.test_function_unsupported_devices">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;func, expected&quot;</span><span class="p">,</span>
+    <span class="p">[(</span><span class="n">_composition_1</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gpu&quot;</span><span class="p">,</span> <span class="s2">&quot;tpu&quot;</span><span class="p">]),</span> <span class="p">(</span><span class="n">_composition_2</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gpu&quot;</span><span class="p">,</span> <span class="s2">&quot;tpu&quot;</span><span class="p">])],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_function_unsupported_devices</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">function_unsupported_devices</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
+
+
+<span class="c1"># Still to Add #</span>
+<span class="c1"># ---------------#</span>
+
+
+<span class="c1"># clear_mem_on_dev</span>
+<span class="c1"># used_mem_on_dev # working fine for cpu</span>
+<span class="c1"># percent_used_mem_on_dev # working fine for cpu</span>
+<span class="c1"># dev_util # working fine for cpu</span>
+<span class="c1"># tpu_is_available</span>
+<span class="c1"># _assert_dev_correct_formatting</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022, Ivy Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

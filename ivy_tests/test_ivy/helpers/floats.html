@@ -138,6 +138,41 @@
              
   <section id="floats">
 <h1>floats<a class="headerlink" href="#floats" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.floats">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">floats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_subnormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.99</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_value_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/helpers.html#floats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.floats" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Draws an arbitrarily sized list of floats with a safety factor applied</dt><dd><p>to avoid values being generated at the edge of a dtype limit.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>min_value</strong> – minimum value of floats generated.</p></li>
+<li><p><strong>max_value</strong> – maximum value of floats generated.</p></li>
+<li><p><strong>allow_nan</strong> – if True, allow Nans in the list.</p></li>
+<li><p><strong>allow_inf</strong> – if True, allow inf in the list.</p></li>
+<li><p><strong>allow_subnormal</strong> – if True, allow subnormals in the list.</p></li>
+<li><p><strong>width</strong> – The width argument specifies the maximum number of bits of precision
+required to represent the generated float. Valid values are 16, 32, or 64.</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the minimum limit.</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the maximum limit.</p></li>
+<li><p><strong>safety_factor</strong> – default = 0.99. Only values which are 99% or less than the edge of
+the limit for a given dtype are generated.</p></li>
+<li><p><strong>small_value_safety_factor</strong> – default = 1.1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – list of floats.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>Supported Frameworks:</strong></div>

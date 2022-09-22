@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype &mdash; Ivy 1.0 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> Ivy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../deep_dive.html">Deep Dive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/compilation.html">Compilation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/constants.html">Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/data_type.html">Data type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/meta.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/nest.html">Nest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../functional/ivy/utility.html">Utility</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_classes/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_classes/array.html">Array</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/converters.html">Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/optimizers.html">Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../stateful/sequential.html">Sequential</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ivy tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_array_api.html">Test array api</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_ivy.html">Test ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/conftest.html">Conftest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/test_docstrings.html">Test docstrings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ivy_tests/write_array_api_tests_k_flag.html">Write array api tests k flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ecosystem"">Ivy ecosystem</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Ivy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+      <li>ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Collection of tests for unified dtype functions.&quot;&quot;&quot;</span>
+
+
+<span class="c1"># global</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">hypothesis</span> <span class="kn">import</span> <span class="n">given</span><span class="p">,</span> <span class="n">assume</span><span class="p">,</span> <span class="n">strategies</span> <span class="k">as</span> <span class="n">st</span>
+
+<span class="c1"># local</span>
+<span class="kn">import</span> <span class="nn">ivy</span>
+<span class="kn">import</span> <span class="nn">ivy.functional.backends.jax</span> <span class="k">as</span> <span class="nn">ivy_jax</span>
+<span class="kn">import</span> <span class="nn">ivy.functional.backends.numpy</span> <span class="k">as</span> <span class="nn">ivy_np</span>
+<span class="kn">import</span> <span class="nn">ivy.functional.backends.tensorflow</span> <span class="k">as</span> <span class="nn">ivy_tf</span>
+<span class="kn">import</span> <span class="nn">ivy.functional.backends.torch</span> <span class="k">as</span> <span class="nn">ivy_torch</span>
+<span class="kn">import</span> <span class="nn">ivy_tests.test_ivy.helpers</span> <span class="k">as</span> <span class="nn">helpers</span>
+<span class="kn">from</span> <span class="nn">ivy_tests.test_ivy.helpers</span> <span class="kn">import</span> <span class="n">handle_cmd_line_args</span>
+
+
+<span class="c1"># dtype objects</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="k">def</span> <span class="nf">test_dtype_instances</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;torch&quot;</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">uint16</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">uint64</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+
+
+<span class="c1"># for data generation in multiple tests</span>
+<span class="n">dtype_shared</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy_np</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;dtype&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="dtypes_shared"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/dtypes_shared.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.dtypes_shared">[docs]</a><span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">dtypes_shared</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">num_dtypes</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">num_dtypes</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">num_dtypes</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">num_dtypes</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">draw</span><span class="p">(</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span>
+            <span class="n">st</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+                <span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy_np</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+                <span class="n">min_size</span><span class="o">=</span><span class="n">num_dtypes</span><span class="p">,</span>
+                <span class="n">max_size</span><span class="o">=</span><span class="n">num_dtypes</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">key</span><span class="o">=</span><span class="s2">&quot;dtypes&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+<span class="c1"># Array API Standard Function Tests #</span>
+<span class="c1"># --------------------------------- #</span>
+
+
+<span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">_astype_helper</span><span class="p">(</span><span class="n">draw</span><span class="p">):</span>
+    <span class="n">dtype</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span>
+        <span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+            <span class="n">available_dtypes</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">),</span>
+            <span class="n">num_arrays</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">small_abs_safety_factor</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">large_abs_safety_factor</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">safety_factor_scale</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">cast_dtype</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span>
+        <span class="n">helpers</span><span class="o">.</span><span class="n">get_castable_dtype</span><span class="p">(</span><span class="n">draw</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">)),</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">cast_dtype</span>
+
+
+<span class="c1"># astype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_and_x_and_cast_dtype</span><span class="o">=</span><span class="n">_astype_helper</span><span class="p">(),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;astype&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_astype</span><span class="p">(</span>
+    <span class="n">dtype_and_x_and_cast_dtype</span><span class="p">,</span>
+    <span class="n">with_out</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">input_dtype</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">cast_dtype</span> <span class="o">=</span> <span class="n">dtype_and_x_and_cast_dtype</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="n">with_out</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;astype&quot;</span><span class="p">,</span>
+        <span class="n">rtol_</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+        <span class="n">atol_</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">),</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">cast_dtype</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># broadcast arrays</span>
+<div class="viewcode-block" id="broadcastable_arrays"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/broadcastable_arrays.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.broadcastable_arrays">[docs]</a><span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">broadcastable_arrays</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">dtypes</span><span class="p">):</span>
+    <span class="n">num_arrays</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;num_arrays&quot;</span><span class="p">)</span>
+    <span class="n">shapes</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">num_arrays</span><span class="o">.</span><span class="n">flatmap</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">mutually_broadcastable_shapes</span><span class="p">))</span>
+    <span class="n">dtypes</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">dtypes</span><span class="p">)</span>
+    <span class="n">arrays</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">shapes</span><span class="p">,</span> <span class="n">dtypes</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">nph</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;x</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">arrays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">arrays</span></div>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">arrays</span><span class="o">=</span><span class="n">broadcastable_arrays</span><span class="p">(</span><span class="n">dtypes_shared</span><span class="p">(</span><span class="s2">&quot;num_arrays&quot;</span><span class="p">)),</span>
+    <span class="n">input_dtypes</span><span class="o">=</span><span class="n">dtypes_shared</span><span class="p">(</span><span class="s2">&quot;num_arrays&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_broadcast_arrays</span><span class="p">(</span>
+    <span class="n">arrays</span><span class="p">,</span>
+    <span class="n">input_dtypes</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">kw</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">input_dtypes</span><span class="p">)):</span>
+        <span class="n">kw</span><span class="p">[</span><span class="s2">&quot;x</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">num_positional_args</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">kw</span><span class="p">)</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtypes</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;broadcast_arrays&quot;</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kw</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array_and_shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">array_and_broadcastable_shape</span><span class="p">(</span><span class="n">dtype_shared</span><span class="p">),</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;broadcast_to&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_broadcast_to</span><span class="p">(</span>
+    <span class="n">array_and_shape</span><span class="p">,</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">with_out</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">array</span><span class="p">,</span> <span class="n">to_shape</span> <span class="o">=</span> <span class="n">array_and_shape</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="n">with_out</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;broadcast_to&quot;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">array</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">to_shape</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># can_cast</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_and_x</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+        <span class="n">available_dtypes</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">num_arrays</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">),</span>
+    <span class="n">to_dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;can_cast&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_can_cast</span><span class="p">(</span>
+    <span class="n">dtype_and_x</span><span class="p">,</span>
+    <span class="n">to_dtype</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">input_dtype</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">dtype_and_x</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;can_cast&quot;</span><span class="p">,</span>
+        <span class="n">from_</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">),</span>
+        <span class="n">to</span><span class="o">=</span><span class="n">to_dtype</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">_array_or_type</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">float_or_int</span><span class="p">):</span>
+    <span class="n">valid_dtypes</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;float&quot;</span><span class="p">:</span> <span class="n">draw</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)),</span>
+        <span class="s2">&quot;int&quot;</span><span class="p">:</span> <span class="n">draw</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;integer&quot;</span><span class="p">)),</span>
+    <span class="p">}[</span><span class="n">float_or_int</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">draw</span><span class="p">(</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">draw</span><span class="p">(</span>
+                    <span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+                        <span class="n">available_dtypes</span><span class="o">=</span><span class="n">valid_dtypes</span><span class="p">,</span> <span class="n">num_arrays</span><span class="o">=</span><span class="mi">1</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="n">draw</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">valid_dtypes</span><span class="p">)),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># finfo</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">_array_or_type</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;finfo&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_finfo</span><span class="p">(</span>
+    <span class="nb">type</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">input_dtype</span> <span class="o">=</span> <span class="nb">type</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">input_dtype</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="nb">type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;finfo&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ret</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">mach_lims</span><span class="p">,</span> <span class="n">mach_lims_np</span> <span class="o">=</span> <span class="n">ret</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">mach_lims</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">mach_lims</span><span class="o">.</span><span class="n">max</span><span class="p">,</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">max</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">mach_lims</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">mach_lims</span><span class="o">.</span><span class="n">bits</span> <span class="o">==</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">bits</span>
+
+
+<span class="c1"># iinfo</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">_array_or_type</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;iinfo&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_iinfo</span><span class="p">(</span>
+    <span class="nb">type</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">input_dtype</span> <span class="o">=</span> <span class="nb">type</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">input_dtype</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="nb">type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;iinfo&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ret</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">mach_lims</span><span class="p">,</span> <span class="n">mach_lims_np</span> <span class="o">=</span> <span class="n">ret</span>
+    <span class="k">assert</span> <span class="n">mach_lims</span><span class="o">.</span><span class="n">min</span> <span class="o">==</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">min</span>
+    <span class="k">assert</span> <span class="n">mach_lims</span><span class="o">.</span><span class="n">max</span> <span class="o">==</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">max</span>
+    <span class="k">assert</span> <span class="n">mach_lims</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">dtype</span>
+    <span class="k">assert</span> <span class="n">mach_lims</span><span class="o">.</span><span class="n">bits</span> <span class="o">==</span> <span class="n">mach_lims_np</span><span class="o">.</span><span class="n">bits</span>
+
+
+<span class="c1"># result_type</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_and_x</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+        <span class="n">available_dtypes</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+        <span class="n">num_arrays</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">shared</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;num_arrays&quot;</span><span class="p">),</span>
+        <span class="n">shared_dtype</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_result_type</span><span class="p">(</span>
+    <span class="n">dtype_and_x</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">dtype</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">as_lists</span><span class="p">(</span><span class="o">*</span><span class="n">dtype_and_x</span><span class="p">)</span>
+    <span class="n">kw</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">dtype_</span><span class="p">,</span> <span class="n">x_</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">x</span><span class="p">)):</span>
+        <span class="n">kw</span><span class="p">[</span><span class="s2">&quot;x</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x_</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_</span><span class="p">)</span>
+    <span class="n">num_positional_args</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">kw</span><span class="p">)</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;result_type&quot;</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kw</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># Extra Ivy Function Tests #</span>
+<span class="c1"># ------------------------ #</span>
+
+
+<span class="c1"># as_ivy_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_as_ivy_dtype</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">as_ivy_dtype</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;input_dtype=</span><span class="si">{</span><span class="n">input_dtype</span><span class="si">!r}</span><span class="s2">, but should be str or ivy.Dtype&quot;</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;result=</span><span class="si">{</span><span class="n">res</span><span class="si">!r}</span><span class="s2">, but should be str&quot;</span>
+
+
+<span class="n">_valid_dtype_in_all_frameworks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;int16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;int32&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;int64&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uint8&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;float16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;float64&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="c1"># as_native_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">input_dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">_valid_dtype_in_all_frameworks</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">test_as_native_dtype</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">as_native_dtype</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;input_dtype=</span><span class="si">{</span><span class="n">input_dtype</span><span class="si">!r}</span><span class="s2">, but should be str or ivy.Dtype&quot;</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;result=</span><span class="si">{</span><span class="n">res</span><span class="si">!r}</span><span class="s2">, but should be ivy.NativeDtype&quot;</span>
+
+
+<span class="c1"># closest_valid_dtypes</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">input_dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">_valid_dtype_in_all_frameworks</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">test_closest_valid_dtype</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">closest_valid_dtype</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">res</span><span class="p">,</span> <span class="nb">str</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;result=</span><span class="si">{</span><span class="n">res</span><span class="si">!r}</span><span class="s2">, but should be str or ivy.Dtype&quot;</span>
+
+
+<span class="c1"># default_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">as_native</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_default_dtype</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_native</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">assume</span><span class="p">(</span><span class="n">input_dtype</span> <span class="ow">in</span> <span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="n">as_native</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">input_dtype</span><span class="p">,</span> <span class="nb">str</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;input_dtype=</span><span class="si">{</span><span class="n">input_dtype</span><span class="si">!r}</span><span class="s2">, but should be str or ivy.Dtype&quot;</span>
+
+
+<span class="c1"># dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">nph</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+            <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+            <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+    <span class="n">as_native</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;dtype&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_dtype</span><span class="p">(</span>
+    <span class="n">array</span><span class="p">,</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_native</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;dtype&quot;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">array</span><span class="p">,</span>
+        <span class="n">as_native</span><span class="o">=</span><span class="n">as_native</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># dtype_bits</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;dtype_bits&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_dtype_bits</span><span class="p">(</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;dtype_bits&quot;</span><span class="p">,</span>
+        <span class="n">dtype_in</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ivy</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ret</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">num_bits</span><span class="p">,</span> <span class="n">num_bits_np</span> <span class="o">=</span> <span class="n">ret</span>
+    <span class="k">assert</span> <span class="n">num_bits</span> <span class="o">==</span> <span class="n">num_bits_np</span>
+
+
+<span class="c1"># is_bool_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">nph</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+            <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+            <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_bool_dtype&quot;</span><span class="p">),</span>
+    <span class="n">native_array</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+    <span class="n">container</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+    <span class="n">instance_method</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">booleans</span><span class="p">(),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_is_bool_dtype</span><span class="p">(</span>
+    <span class="n">array</span><span class="p">,</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_bool_dtype&quot;</span><span class="p">,</span>
+        <span class="n">dtype_in</span><span class="o">=</span><span class="n">array</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># is_float_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">nph</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+            <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+            <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_float_dtype&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_is_float_dtype</span><span class="p">(</span>
+    <span class="n">array</span><span class="p">,</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_float_dtype&quot;</span><span class="p">,</span>
+        <span class="n">dtype_in</span><span class="o">=</span><span class="n">array</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># is_int_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">array</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">nph</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+            <span class="n">arg</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+            <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;num_dims&quot;</span><span class="p">,</span>
+            <span class="n">size_bounds</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">input_dtype</span><span class="o">=</span><span class="n">dtype_shared</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_int_dtype&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_is_int_dtype</span><span class="p">(</span>
+    <span class="n">array</span><span class="p">,</span>
+    <span class="n">input_dtype</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">instance_method</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="n">instance_method</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;is_int_dtype&quot;</span><span class="p">,</span>
+        <span class="n">dtype_in</span><span class="o">=</span><span class="n">array</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># promote_types</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_and_values</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+        <span class="n">available_dtypes</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">),</span>
+        <span class="n">num_arrays</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">shared_dtype</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;promote_types&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_promote_types</span><span class="p">(</span>
+    <span class="n">dtype_and_values</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">container</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">types</span><span class="p">,</span> <span class="n">arrays</span> <span class="o">=</span> <span class="n">dtype_and_values</span>
+    <span class="n">type1</span><span class="p">,</span> <span class="n">type2</span> <span class="o">=</span> <span class="n">types</span>
+    <span class="n">input_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">type1</span><span class="p">,</span> <span class="n">type2</span><span class="p">]</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;promote_types&quot;</span><span class="p">,</span>
+        <span class="n">type1</span><span class="o">=</span><span class="n">type1</span><span class="p">,</span>
+        <span class="n">type2</span><span class="o">=</span><span class="n">type2</span><span class="p">,</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># type_promote_arrays</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_and_values</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">dtype_and_values</span><span class="p">(</span>
+        <span class="n">available_dtypes</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">get_dtypes</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+        <span class="n">num_arrays</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">shared_dtype</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">num_positional_args</span><span class="o">=</span><span class="n">helpers</span><span class="o">.</span><span class="n">num_positional_args</span><span class="p">(</span><span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;type_promote_arrays&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_type_promote_arrays</span><span class="p">(</span>
+    <span class="n">dtype_and_values</span><span class="p">,</span>
+    <span class="n">as_variable</span><span class="p">,</span>
+    <span class="n">num_positional_args</span><span class="p">,</span>
+    <span class="n">native_array</span><span class="p">,</span>
+    <span class="n">fw</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">types</span><span class="p">,</span> <span class="n">arrays</span> <span class="o">=</span> <span class="n">dtype_and_values</span>
+    <span class="n">type1</span><span class="p">,</span> <span class="n">type2</span> <span class="o">=</span> <span class="n">types</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span> <span class="o">=</span> <span class="n">arrays</span>
+    <span class="n">input_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">type1</span><span class="p">,</span> <span class="n">type2</span><span class="p">]</span>
+    <span class="n">helpers</span><span class="o">.</span><span class="n">test_function</span><span class="p">(</span>
+        <span class="n">input_dtypes</span><span class="o">=</span><span class="n">input_dtype</span><span class="p">,</span>
+        <span class="n">as_variable_flags</span><span class="o">=</span><span class="n">as_variable</span><span class="p">,</span>
+        <span class="n">with_out</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_positional_args</span><span class="o">=</span><span class="n">num_positional_args</span><span class="p">,</span>
+        <span class="n">native_array_flags</span><span class="o">=</span><span class="n">native_array</span><span class="p">,</span>
+        <span class="n">container_flags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">instance_method</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fw</span><span class="o">=</span><span class="n">fw</span><span class="p">,</span>
+        <span class="n">fn_name</span><span class="o">=</span><span class="s2">&quot;type_promote_arrays&quot;</span><span class="p">,</span>
+        <span class="n">x1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span>
+        <span class="n">x2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x2</span><span class="p">),</span>
+        <span class="n">test_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># default_float_dtype</span>
+<div class="viewcode-block" id="test_default_float_dtype"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/test_default_float_dtype.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.test_default_float_dtype">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;float_dtype&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;input&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">[(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">49.0</span><span class="p">)],</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">]),</span>
+        <span class="mi">10</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;as_native&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_default_float_dtype</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">float_dtype</span><span class="p">,</span> <span class="n">as_native</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span> <span class="n">float_dtype</span><span class="o">=</span><span class="n">float_dtype</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="n">as_native</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">float_dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">float32</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype</span><span class="p">(</span><span class="n">float_dtype</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">float16</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype</span><span class="p">()</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">float32</span></div>
+
+
+<span class="c1"># default_int_dtype</span>
+<div class="viewcode-block" id="test_default_int_dtype"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/test_default_int_dtype.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.test_default_int_dtype">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;int_dtype&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">int16</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;input&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">49</span><span class="p">)],</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]),</span>
+        <span class="mi">10</span><span class="p">,</span>
+        <span class="mf">10.0</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;as_native&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_default_int_dtype</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">int_dtype</span><span class="p">,</span> <span class="n">as_native</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span> <span class="n">int_dtype</span><span class="o">=</span><span class="n">int_dtype</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="n">as_native</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">int_dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">as_native</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">int32</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype</span><span class="p">(</span><span class="n">int_dtype</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">int16</span>
+    <span class="k">assert</span> <span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype</span><span class="p">()</span> <span class="o">==</span> <span class="n">ivy</span><span class="o">.</span><span class="n">int32</span></div>
+
+
+<div class="viewcode-block" id="dtypes_list"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/dtypes_list.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.dtypes_list">[docs]</a><span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">dtypes_list</span><span class="p">(</span><span class="n">draw</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">one_of</span><span class="p">(</span><span class="n">helpers</span><span class="o">.</span><span class="n">ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">5</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">draw</span><span class="p">(</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">lists</span><span class="p">(</span>
+            <span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+            <span class="n">min_size</span><span class="o">=</span><span class="n">num</span><span class="p">,</span>
+            <span class="n">max_size</span><span class="o">=</span><span class="n">num</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_composition_1</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">relu</span><span class="p">()</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_composition_2</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">floor</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">ceil</span><span class="p">()</span> <span class="ow">or</span> <span class="n">a</span>
+
+
+<span class="c1"># function_unsupported_dtypes</span>
+<div class="viewcode-block" id="test_function_supported_dtypes"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/test_function_supported_dtypes.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.test_function_supported_dtypes">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;func, expected&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span>
+            <span class="n">_composition_1</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int64&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint8&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint64&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bfloat16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float64&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="n">_composition_2</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;int64&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint8&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uint64&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bfloat16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float16&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;float64&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_function_supported_dtypes</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">function_supported_dtypes</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">expected</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">))</span>
+
+    <span class="c1"># Since float16 is only not valid for the torch backend, we remove from expected</span>
+    <span class="k">if</span> <span class="s2">&quot;torch&quot;</span> <span class="ow">in</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">():</span>
+        <span class="n">exp</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;float16&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
+
+
+<span class="c1"># function_unsupported_dtypes</span>
+<div class="viewcode-block" id="test_function_unsupported_dtypes"><a class="viewcode-back" href="../../../../../../ivy_tests/test_ivy/test_functional/test_core/test_dtype/test_function_unsupported_dtypes.html#ivy.ivy_tests.test_ivy.test_functional.test_core.test_dtype.test_function_unsupported_dtypes">[docs]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;func, expected&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="n">_composition_1</span><span class="p">,</span> <span class="p">[]),</span>
+        <span class="p">(</span><span class="n">_composition_2</span><span class="p">,</span> <span class="p">[]),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_function_unsupported_dtypes</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">function_unsupported_dtypes</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">expected</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">invalid_dtypes</span><span class="p">))</span>
+
+    <span class="c1"># Since float16 is only not valid for the torch backend, we add to expected</span>
+    <span class="k">if</span> <span class="s2">&quot;torch&quot;</span> <span class="ow">in</span> <span class="n">ivy</span><span class="o">.</span><span class="n">current_backend_str</span><span class="p">():</span>
+        <span class="n">exp</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;float16&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">res</span><span class="p">)</span></div>
+
+
+<span class="c1"># invalid_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_in</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_invalid_dtype</span><span class="p">(</span><span class="n">dtype_in</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">invalid_dtype</span><span class="p">(</span><span class="n">dtype_in</span><span class="p">)</span>
+    <span class="n">fw_invalid_dtypes</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;torch&quot;</span><span class="p">:</span> <span class="n">ivy_torch</span><span class="o">.</span><span class="n">invalid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;tensorflow&quot;</span><span class="p">:</span> <span class="n">ivy_tf</span><span class="o">.</span><span class="n">invalid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;jax&quot;</span><span class="p">:</span> <span class="n">ivy_jax</span><span class="o">.</span><span class="n">invalid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;numpy&quot;</span><span class="p">:</span> <span class="n">ivy_np</span><span class="o">.</span><span class="n">invalid_dtypes</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">dtype_in</span> <span class="ow">in</span> <span class="n">fw_invalid_dtypes</span><span class="p">[</span><span class="n">fw</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">res</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;fDtype = </span><span class="si">{</span><span class="n">dtype_in</span><span class="si">!r}</span><span class="s2"> is a valid dtype for </span><span class="si">{</span><span class="n">fw</span><span class="si">}</span><span class="s2">, but&quot;</span> <span class="sa">f</span><span class="s2">&quot;result = </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">res</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;fDtype = </span><span class="si">{</span><span class="n">dtype_in</span><span class="si">!r}</span><span class="s2"> is not a valid dtype for </span><span class="si">{</span><span class="n">fw</span><span class="si">}</span><span class="s2">, but&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;result = </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+
+<span class="c1"># unset_default_dtype()</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_unset_default_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+    <span class="n">stack_size_before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_dtype_stack</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">set_default_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_dtype</span><span class="p">()</span>
+    <span class="n">stack_size_after</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_dtype_stack</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">stack_size_before</span> <span class="o">==</span> <span class="n">stack_size_after</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Default dtype not unset. Stack size= </span><span class="si">{</span><span class="n">stack_size_after</span><span class="si">!r}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># unset_default_float_dtype()</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_float_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_unset_default_float_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+    <span class="n">stack_size_before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype_stack</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">set_default_float_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_float_dtype</span><span class="p">()</span>
+    <span class="n">stack_size_after</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_float_dtype_stack</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">stack_size_before</span> <span class="o">==</span> <span class="n">stack_size_after</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Default float dtype not unset. Stack size= </span><span class="si">{</span><span class="n">stack_size_after</span><span class="si">!r}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># unset_default_int_dtype()</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_int_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_unset_default_int_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+    <span class="n">stack_size_before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype_stack</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">set_default_int_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">ivy</span><span class="o">.</span><span class="n">unset_default_int_dtype</span><span class="p">()</span>
+    <span class="n">stack_size_after</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">default_int_dtype_stack</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">stack_size_before</span> <span class="o">==</span> <span class="n">stack_size_after</span>
+    <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Default int dtype not unset. Stack size= </span><span class="si">{</span><span class="n">stack_size_after</span><span class="si">!r}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># valid_dtype</span>
+<span class="nd">@handle_cmd_line_args</span>
+<span class="nd">@given</span><span class="p">(</span>
+    <span class="n">dtype_in</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sampled_from</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_valid_dtype</span><span class="p">(</span><span class="n">dtype_in</span><span class="p">,</span> <span class="n">fw</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">valid_dtype</span><span class="p">(</span><span class="n">dtype_in</span><span class="p">)</span>
+    <span class="n">fw_valid_dtypes</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;torch&quot;</span><span class="p">:</span> <span class="n">ivy_torch</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;tensorflow&quot;</span><span class="p">:</span> <span class="n">ivy_tf</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;jax&quot;</span><span class="p">:</span> <span class="n">ivy_jax</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">,</span>
+        <span class="s2">&quot;numpy&quot;</span><span class="p">:</span> <span class="n">ivy_np</span><span class="o">.</span><span class="n">valid_dtypes</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">dtype_in</span> <span class="ow">in</span> <span class="n">fw_valid_dtypes</span><span class="p">[</span><span class="n">fw</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">res</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;fDtype = </span><span class="si">{</span><span class="n">dtype_in</span><span class="si">!r}</span><span class="s2"> is not a valid dtype for </span><span class="si">{</span><span class="n">fw</span><span class="si">}</span><span class="s2">, but&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;result = </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">res</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;fDtype = </span><span class="si">{</span><span class="n">dtype_in</span><span class="si">!r}</span><span class="s2"> is a valid dtype for </span><span class="si">{</span><span class="n">fw</span><span class="si">}</span><span class="s2">, but&quot;</span> <span class="sa">f</span><span class="s2">&quot;result = </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022, Ivy Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

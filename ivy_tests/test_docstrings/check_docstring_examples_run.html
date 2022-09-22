@@ -146,6 +146,25 @@
              
   <section id="check-docstring-examples-run">
 <h1>check_docstring_examples_run<a class="headerlink" href="#check-docstring-examples-run" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_docstrings.check_docstring_examples_run">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_docstrings.</span></span><span class="sig-name descname"><span class="pre">check_docstring_examples_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_container</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_sig_fig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_docstrings.html#check_docstring_examples_run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_docstrings.check_docstring_examples_run" title="Permalink to this definition"></a></dt>
+<dd><p>Performs docstring tests for a given function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> – Callable function to be tested.</p></li>
+<li><p><strong>from_container</strong> – if True, check docstring of the function as a method of an Ivy Container.</p></li>
+<li><p><strong>from_array</strong> – if True, check docstring of the function as a method of an Ivy Array.</p></li>
+<li><p><strong>num_sig_fig</strong> – Number of significant figures to check in the example.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None if the test passes, else marks the test as failed.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><strong>Supported Frameworks:</strong></div>

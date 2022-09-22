@@ -136,8 +136,1203 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="helpers">
-<h1>Helpers<a class="headerlink" href="#helpers" title="Permalink to this heading"></a></h1>
+  <section id="module-ivy.ivy_tests.test_ivy.helpers">
+<span id="helpers"></span><h1>Helpers<a class="headerlink" href="#module-ivy.ivy_tests.test_ivy.helpers" title="Permalink to this heading"></a></h1>
+<p>Collection of helpers for ivy unit tests.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.args_to_container">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">args_to_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#args_to_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.args_to_container" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.array_and_broadcastable_shape">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">array_and_broadcastable_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#array_and_broadcastable_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.array_and_broadcastable_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an array and a shape that the array can be broadcast to</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.array_bools">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">array_bools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">shared(ints(min_value=1,</span> <span class="pre">max_value=4),</span> <span class="pre">key='num_arrays')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#array_bools"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.array_bools" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a boolean list of a given size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>num_arrays</strong> – size of the list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a list.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.array_dtypes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">array_dtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">shared(ints(min_value=1,</span> <span class="pre">max_value=4),</span> <span class="pre">key='num_arrays')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">available_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('float16',</span> <span class="pre">'float32',</span> <span class="pre">'float64')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#array_dtypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.array_dtypes" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a list of data types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>num_arrays</strong> – number of data types to be drawn.</p></li>
+<li><p><strong>available_dtypes</strong> – universe of available data types.</p></li>
+<li><p><strong>shared_dtype</strong> – if True, all data types in the list are same.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a list.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.array_n_indices_n_axis">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">array_n_indices_n_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('int8',</span> <span class="pre">'int16',</span> <span class="pre">'int32',</span> <span class="pre">'int64',</span> <span class="pre">'uint8',</span> <span class="pre">'uint16',</span> <span class="pre">'uint32',</span> <span class="pre">'uint64')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_random_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boolean_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_dimension_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#array_n_indices_n_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.array_n_indices_n_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Generates two arrays x &amp; indices, the values in the indices array are indices
+of the array x. Draws an integers randomly from the minimum and maximum number of
+positional arguments a given function can take.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array_dtypes</strong> – list of data type to draw the array dtype from.</p></li>
+<li><p><strong>indices_dtypes</strong> – list of data type to draw the indices dtype from.</p></li>
+<li><p><strong>disable_random_axis</strong> – axis is set to -1 when True. Randomly generated with hypothesis if False.</p></li>
+<li><p><strong>allow_inf</strong> – inf values are allowed to be generated in the values array when True.</p></li>
+<li><p><strong>min_num_dims</strong> – The minimum number of dimensions the arrays can have.</p></li>
+<li><p><strong>max_num_dims</strong> – The maximum number of dimensions the arrays can have.</p></li>
+<li><p><strong>min_dim_size</strong> – The minimum size of the dimensions of the arrays.</p></li>
+<li><p><strong>max_dim_size</strong> – The maximum size of the dimensions of the arrays.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>A strategy that can be used in the &#64;given hypothesis decorator</em></p></li>
+<li><p><em>which generates arrays of values and indices.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<dl class="simple">
+<dt>&#64;given(</dt><dd><dl class="simple">
+<dt>array_n_indices_n_axis=array_n_indices_n_axis(</dt><dd><p>array_dtypes=helpers.get_dtypes(“valid”),
+indices_dtypes=helpers.get_dtypes(“integer”),
+boolean_mask=False,
+min_num_dims=1,
+max_num_dims=5,
+min_dim_size=1,
+max_dim_size=10
+)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.array_values">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">array_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_subnormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#array_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.array_values" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a list (of lists) of a given shape containing values of a given data type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>dtype</strong> – data type of the elements of the list.</p></li>
+<li><p><strong>shape</strong> – shape of the required list.</p></li>
+<li><p><strong>min_value</strong> – minimum value of elements in the list.</p></li>
+<li><p><strong>max_value</strong> – maximum value of elements in the list.</p></li>
+<li><p><strong>allow_nan</strong> – if True, allow Nans in the list.</p></li>
+<li><p><strong>allow_subnormal</strong> – if True, allow subnormals in the list.</p></li>
+<li><p><strong>allow_inf</strong> – if True, allow inf in the list.</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the minimum limit.</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the maximum limit.</p></li>
+<li><p><strong>large_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,</p>
+<p>when a “linear” safety factor scaler is used,  a safety factor of 2 means
+that only 50% of the range is included, a safety factor of 3 means that
+only 33% of the range is included etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with maximum
+value of 2^32 and a safety factor of 2 transforms the maximum to 2^16.</p>
+</p></li>
+<li><p><strong>small_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,
+this has no effect on integer data types.</p>
+<p>when a “linear” safety factor scaler is used, a data type with minimum
+representable number of 0.0001 and a safety factor of 2 transforms the
+minimum to 0.0002, a safety factor of 3 transforms the minimum to 0.0003 etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with minimum
+representable number of 0.5 * 2^-16 and a safety factor of 2 transforms the
+minimum to 0.5 * 2^-8, a safety factor of 3 transforms the minimum to 0.5 * 2^-4</p>
+</p></li>
+<li><p><strong>safety_factor_scale</strong> – The operation to use when calculating the maximum value of the list. Can be
+“linear” or “log”. Default value = “linear”.</p></li>
+<li><p><strong>range</strong> (<em>the</em>) – </p></li>
+<li><p><strong>limit</strong> (<em>the invalid value will be replaced by data type</em>) – </p></li>
+<li><p><strong>range</strong> – </p></li>
+<li><p><strong>preserved.</strong> (<em>of the numbers in that case is not</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a list.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.arrays_and_axes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">arrays_and_axes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allow_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#arrays_and_axes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.arrays_and_axes" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.as_cont">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">as_cont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#as_cont"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.as_cont" title="Permalink to this definition"></a></dt>
+<dd><p>Returns x as an Ivy Container, containing x at all its leaves.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.as_lists">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">as_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#as_lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.as_lists" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the elements in args to be of type list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.assert_all_close">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">assert_all_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ret_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_from_gt_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TensorFlow'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#assert_all_close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.assert_all_close" title="Permalink to this definition"></a></dt>
+<dd><p>Matches the ret_np and ret_from_np inputs element-by-element to ensure that
+they are the same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ret_np</strong> – Return from the framework to test. Ivy Container or Numpy Array.</p></li>
+<li><p><strong>ret_from_gt_np</strong> – Return from the ground truth framework. Ivy Container or Numpy Array.</p></li>
+<li><p><strong>rtol</strong> – Relative Tolerance Value.</p></li>
+<li><p><strong>atol</strong> – Absolute Tolerance Value.</p></li>
+<li><p><strong>ground_truth_backend</strong> – Ground Truth Backend Framework.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None if the test passes, else marks the test as failed.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.assert_same_type_and_shape">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">assert_same_type_and_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">this_key_chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#assert_same_type_and_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.assert_same_type_and_shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.bool_val_flags">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">bool_val_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl_arg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#bool_val_flags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.bool_val_flags" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.broadcast_shapes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">broadcast_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">shapes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#broadcast_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.broadcast_shapes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.check_unsupported_device">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">check_unsupported_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#check_unsupported_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.check_unsupported_device" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether a function does not support a given device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> – The function to check.</p></li>
+<li><p><strong>input_device</strong> – The backend device.</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – All arguments in Numpy Format, to check for the presence of dtype argument.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>True if the function does not support the given device, False otherwise.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.check_unsupported_device_and_dtype">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">check_unsupported_device_and_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#check_unsupported_device_and_dtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.check_unsupported_device_and_dtype" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether a function does not support a given device or data types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> – The function to check.</p></li>
+<li><p><strong>device</strong> – The backend device to check.</p></li>
+<li><p><strong>input_dtypes</strong> – data-types of the input arguments and keyword-arguments.</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – All arguments in Numpy Format, to check for the presence of dtype argument.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>True if the function does not support both the device and any data type, False</em></p></li>
+<li><p><em>otherwise.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.check_unsupported_dtype">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">check_unsupported_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#check_unsupported_dtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.check_unsupported_dtype" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether a function does not support the input data types or the output
+data type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> – The function to check.</p></li>
+<li><p><strong>input_dtypes</strong> – data-types of the input arguments and keyword-arguments.</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – All arguments in Numpy Format, to check for the presence of dtype argument.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>True if the function does not support the given input or output data types, False</em></p></li>
+<li><p><em>otherwise.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.convtrue">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">convtrue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argument</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#convtrue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.convtrue" title="Permalink to this definition"></a></dt>
+<dd><p>Convert NativeClass in argument to true framework counter part</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.create_args_kwargs">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">create_args_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#create_args_kwargs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.create_args_kwargs" title="Permalink to this definition"></a></dt>
+<dd><p>Creates arguments and keyword-arguments for the function to test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args_np</strong> – A dictionary of arguments in Numpy.</p></li>
+<li><p><strong>kwargs_np</strong> – A dictionary of keyword-arguments in Numpy.</p></li>
+<li><p><strong>input_dtypes</strong> – data-types of the input arguments and keyword-arguments.</p></li>
+<li><p><strong>as_variable_flags</strong> – A list of booleans. if True for a corresponding input argument, it is called
+as an Ivy Variable.</p></li>
+<li><p><strong>native_array_flags</strong> – if not None, the corresponding argument is called as a Native Array.</p></li>
+<li><p><strong>container_flags</strong> – if not None, the corresponding argument is called as an Ivy Container.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Arguments, Keyword-arguments, number of arguments, and indexes on arguments and</em></p></li>
+<li><p><em>keyword-arguments.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.dtype_and_values">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">dtype_and_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">available_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('int8',</span> <span class="pre">'int16',</span> <span class="pre">'int32',</span> <span class="pre">'int64',</span> <span class="pre">'uint8',</span> <span class="pre">'uint16',</span> <span class="pre">'uint32',</span> <span class="pre">'uint64',</span> <span class="pre">'float16',</span> <span class="pre">'float32',</span> <span class="pre">'float64',</span> <span class="pre">'bool')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#dtype_and_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.dtype_and_values" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a list of arrays with elements from the given corresponding data types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>available_dtypes</strong> – if dtype is None, data types are drawn from this list randomly.</p></li>
+<li><p><strong>num_arrays</strong> – Number of arrays to be drawn.</p></li>
+<li><p><strong>min_value</strong> – minimum value of elements in each array.</p></li>
+<li><p><strong>max_value</strong> – maximum value of elements in each array.</p></li>
+<li><p><strong>large_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,</p>
+<p>when a “linear” safety factor scaler is used,  a safety factor of 2 means
+that only 50% of the range is included, a safety factor of 3 means that
+only 33% of the range is included etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with maximum
+value of 2^32 and a safety factor of 2 transforms the maximum to 2^16.</p>
+</p></li>
+<li><p><strong>small_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,
+this has no effect on integer data types.</p>
+<p>when a “linear” safety factor scaler is used, a data type with minimum
+representable number of 0.0001 and a safety factor of 2 transforms the
+minimum to 0.0002, a safety factor of 3 transforms the minimum to 0.0003 etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with minimum
+representable number of 0.5 * 2^-16 and a safety factor of 2 transforms the
+minimum to 0.5 * 2^-8, a safety factor of 3 transforms the minimum to 0.5 * 2^-4</p>
+</p></li>
+<li><p><strong>safety_factor_scale</strong> – The operation to use when calculating the maximum value of the list. Can be
+“linear” or “log”. Default value = “linear”.</p></li>
+<li><p><strong>allow_inf</strong> – if True, allow inf in the arrays.</p></li>
+<li><p><strong>allow_nan</strong> – if True, allow Nans in the arrays.</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the minimum limit.</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the maximum limit.</p></li>
+<li><p><strong>min_num_dims</strong> – minimum size of the shape tuple.</p></li>
+<li><p><strong>max_num_dims</strong> – maximum size of the shape tuple.</p></li>
+<li><p><strong>min_dim_size</strong> – minimum value of each integer in the shape tuple.</p></li>
+<li><p><strong>max_dim_size</strong> – maximum value of each integer in the shape tuple.</p></li>
+<li><p><strong>shape</strong> – shape of the arrays in the list.</p></li>
+<li><p><strong>shared_dtype</strong> – if True, if dtype is None, a single shared dtype is drawn for all arrays.</p></li>
+<li><p><strong>ret_shape</strong> – if True, the shape of the arrays is also returned.</p></li>
+<li><p><strong>dtype</strong> – A list of data types for the given arrays.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a list of dtype and arrays (as lists).</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.dtype_values_axis">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">dtype_values_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">available_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_abs_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valid_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_neg_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_axes_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_axes_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_int_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#dtype_values_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.dtype_values_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Draws an array with elements from the given data type, and a random axis of
+the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>available_dtypes</strong> – if dtype is None, data type is drawn from this list randomly.</p></li>
+<li><p><strong>min_value</strong> – minimum value of elements in the array.</p></li>
+<li><p><strong>max_value</strong> – maximum value of elements in the array.</p></li>
+<li><p><strong>large_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,</p>
+<p>when a “linear” safety factor scaler is used,  a safety factor of 2 means
+that only 50% of the range is included, a safety factor of 3 means that
+only 33% of the range is included etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with maximum
+value of 2^32 and a safety factor of 2 transforms the maximum to 2^16.</p>
+</p></li>
+<li><p><strong>small_abs_safety_factor</strong> – <p>A safety factor of 1 means that all values are included without limitation,
+this has no effect on integer data types.</p>
+<p>when a “linear” safety factor scaler is used, a data type with minimum
+representable number of 0.0001 and a safety factor of 2 transforms the
+minimum to 0.0002, a safety factor of 3 transforms the minimum to 0.0003 etc.</p>
+<p>when a “log” safety factor scaler is used, a data type with minimum
+representable number of 0.5 * 2^-16 and a safety factor of 2 transforms the
+minimum to 0.5 * 2^-8, a safety factor of 3 transforms the minimum to 0.5 * 2^-4</p>
+</p></li>
+<li><p><strong>safety_factor_scale</strong> – The operation to use when calculating the maximum value of the list. Can be
+“linear” or “log”. Default value = “linear”.</p></li>
+<li><p><strong>allow_inf</strong> – if True, allow inf in the array.</p></li>
+<li><p><strong>allow_nan</strong> – if True, allow Nans in the arrays.</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the minimum limit.</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the maximum limit.</p></li>
+<li><p><strong>min_num_dims</strong> – minimum size of the shape tuple.</p></li>
+<li><p><strong>max_num_dims</strong> – maximum size of the shape tuple.</p></li>
+<li><p><strong>min_dim_size</strong> – minimum value of each integer in the shape tuple.</p></li>
+<li><p><strong>max_dim_size</strong> – maximum value of each integer in the shape tuple.</p></li>
+<li><p><strong>valid_axis</strong> – if True, a valid axis will be drawn from the array dimensions.</p></li>
+<li><p><strong>allow_neg_axes</strong> – if True, returned axes may include negative axes.</p></li>
+<li><p><strong>min_axes_size</strong> – minimum size of the axis tuple.</p></li>
+<li><p><strong>max_axes_size</strong> – maximum size of the axis tuple.</p></li>
+<li><p><strong>force_int_axis</strong> – if True, and only one axis is drawn, the returned axis will be an integer.</p></li>
+<li><p><strong>shape</strong> – shape of the array. if None, a random shape is drawn.</p></li>
+<li><p><strong>shared_dtype</strong> – if True, if dtype is None, a single shared dtype is drawn for all arrays.</p></li>
+<li><p><strong>min_axis</strong> – if shape is None, axis is drawn from the range [min_axis, max_axis].</p></li>
+<li><p><strong>max_axis</strong> – if shape is None, axis is drawn from the range [min_axis, max_axis].</p></li>
+<li><p><strong>ret_shape</strong> – if True, the shape of the arrays is also returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a dtype, an array (as list), and an axis.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.flatten">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#flatten"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.flatten" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a flattened numpy version of the arrays in ret.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.flatten_and_to_np">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">flatten_and_to_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#flatten_and_to_np"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.flatten_and_to_np" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.flatten_fw">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">flatten_fw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#flatten_fw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.flatten_fw" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a flattened numpy version of the arrays in ret for a given framework.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.floats">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">floats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_inf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_subnormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.99</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_value_safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#floats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.floats" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Draws an arbitrarily sized list of floats with a safety factor applied</dt><dd><p>to avoid values being generated at the edge of a dtype limit.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>min_value</strong> – minimum value of floats generated.</p></li>
+<li><p><strong>max_value</strong> – maximum value of floats generated.</p></li>
+<li><p><strong>allow_nan</strong> – if True, allow Nans in the list.</p></li>
+<li><p><strong>allow_inf</strong> – if True, allow inf in the list.</p></li>
+<li><p><strong>allow_subnormal</strong> – if True, allow subnormals in the list.</p></li>
+<li><p><strong>width</strong> – The width argument specifies the maximum number of bits of precision
+required to represent the generated float. Valid values are 16, 32, or 64.</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the minimum limit.</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the maximum limit.</p></li>
+<li><p><strong>safety_factor</strong> – default = 0.99. Only values which are 99% or less than the edge of
+the limit for a given dtype are generated.</p></li>
+<li><p><strong>small_value_safety_factor</strong> – default = 1.1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – list of floats.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_axis">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_neg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sorted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Draws one or more axis for the given shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>shape</strong> – shape of the array as a tuple, or a hypothesis strategy from which the shape
+will be drawn</p></li>
+<li><p><strong>allow_neg</strong> – boolean; if True, allow negative axes to be drawn</p></li>
+<li><p><strong>allow_none</strong> – boolean; if True, allow None to be drawn</p></li>
+<li><p><strong>sorted</strong> – boolean; if True, and a tuple of axes is drawn, tuple is sorted in increasing
+fashion</p></li>
+<li><p><strong>unique</strong> – boolean; if True, and a tuple of axes is drawn, all axes drawn will be unique</p></li>
+<li><p><strong>min_size</strong> – int or hypothesis strategy; if a tuple of axes is drawn, the minimum number of
+axes drawn</p></li>
+<li><p><strong>max_size</strong> – int or hypothesis strategy; if a tuple of axes is drawn, the maximum number of
+axes drawn.
+If None and unique is True, then it is set to the number of axes in the shape</p></li>
+<li><p><strong>force_tuple</strong> – boolean, if true, all axis will be returned as a tuple. If force_tuple and
+force_int are true, then an AssertionError is raised</p></li>
+<li><p><strong>force_int</strong> – boolean, if true, all axis will be returned as an int. If force_tuple and
+force_int are true, then an AssertionError is raised</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that can be used in the &#64;given hypothesis decorator.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_bounds">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_bounds" title="Permalink to this definition"></a></dt>
+<dd><p>Draws two integers low, high for a given data type such that low &lt; high.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>dtype</strong> – data type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that can be used in the &#64;given hypothesis decorator.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_castable_dtype">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_castable_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">available_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_castable_dtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_castable_dtype" title="Permalink to this definition"></a></dt>
+<dd><p>Draws castable dtypes for the given dtype based on the current backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – Special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>available_dtypes</strong> – Castable data types are drawn from this list randomly.</p></li>
+<li><p><strong>dtype</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Data type from which to cast.</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – Optional list of values to cast. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – A tuple of inputs and castable dtype.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_current_frontend">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_current_frontend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_current_frontend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_current_frontend" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current frontend framework, returns None if no frontend is set.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_dtypes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_dtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_dtypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_dtypes" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a valid dtypes for the test function. For frontend tests,
+it draws the data types from the intersection between backend
+framework data types and frontend framework dtypes, otherwise,
+draws it from backend framework data types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>kind</strong> – Supported types are integer, float, valid, numeric, and unsigned</p></li>
+<li><p><strong>index</strong> – list indexing incase a test needs to be skipped for a particular dtype(s)</p></li>
+<li><p><strong>full</strong> – returns the complete list of valid types</p></li>
+<li><p><strong>none</strong> – allow none in the list of valid types</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – dtype string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_ivy_jax">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_ivy_jax</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_ivy_jax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_ivy_jax" title="Permalink to this definition"></a></dt>
+<dd><p>Import JAX module from ivy</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_ivy_numpy">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_ivy_numpy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_ivy_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_ivy_numpy" title="Permalink to this definition"></a></dt>
+<dd><p>Import Numpy module from ivy</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_ivy_tensorflow">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_ivy_tensorflow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_ivy_tensorflow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_ivy_tensorflow" title="Permalink to this definition"></a></dt>
+<dd><p>Import Tensorflow module from ivy</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_ivy_torch">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_ivy_torch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_ivy_torch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_ivy_torch" title="Permalink to this definition"></a></dt>
+<dd><p>Import Torch module from ivy</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_mean_std">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_mean_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_mean_std"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_mean_std" title="Permalink to this definition"></a></dt>
+<dd><p>Draws two integers representing the mean and standard deviation for a given data
+type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>dtype</strong> – data type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that can be used in the &#64;given hypothesis decorator.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_ret_and_flattened_np_array">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_ret_and_flattened_np_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_ret_and_flattened_np_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_ret_and_flattened_np_array" title="Permalink to this definition"></a></dt>
+<dd><p>Runs func with args and kwargs, and returns the result along with its flattened
+version.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_shape">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_shape" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Draws a tuple of integers drawn randomly from [min_dim_size, max_dim_size]</dt><dd><p>of size drawn from min_num_dims to max_num_dims. Useful for randomly
+drawing the shape of an array.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>allow_none</strong> – if True, allow for the result to be None.</p></li>
+<li><p><strong>min_num_dims</strong> – minimum size of the tuple.</p></li>
+<li><p><strong>max_num_dims</strong> – maximum size of the tuple.</p></li>
+<li><p><strong>min_dim_size</strong> – minimum value of each integer in the tuple.</p></li>
+<li><p><strong>max_dim_size</strong> – maximum value of each integer in the tuple.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a tuple.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.get_valid_numeric_dtypes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">get_valid_numeric_dtypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#get_valid_numeric_dtypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.get_valid_numeric_dtypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.gradient_incompatible_function">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">gradient_incompatible_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#gradient_incompatible_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.gradient_incompatible_function" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.gradient_test">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">gradient_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs_np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'torch'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#gradient_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.gradient_test" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.handle_cmd_line_args">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">handle_cmd_line_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_fn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#handle_cmd_line_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.handle_cmd_line_args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.ints">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">ints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#ints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.ints" title="Permalink to this definition"></a></dt>
+<dd><p>Draws an arbitrarily sized list of integers with a safety factor
+applied to values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>min_value</strong> – minimum value of integers generated.</p></li>
+<li><p><strong>max_value</strong> – maximum value of integers generated.</p></li>
+<li><p><strong>safety_factor</strong> – default = 0.95. Only values which are 95% or less than the edge of
+the limit for a given dtype are generated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – list of integers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.ints_or_floats">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">ints_or_floats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safety_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#ints_or_floats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.ints_or_floats" title="Permalink to this definition"></a></dt>
+<dd><p>Draws integers or floats with a safety factor
+applied to values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>min_value</strong> – minimum value of integers generated.</p></li>
+<li><p><strong>max_value</strong> – maximum value of integers generated.</p></li>
+<li><p><strong>safety_factor</strong> – default = 0.95. Only values which are 95% or less than the edge of
+the limit for a given dtype are generated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>ret</em> – integer or float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.kwargs_to_args_n_kwargs">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">kwargs_to_args_n_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#kwargs_to_args_n_kwargs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.kwargs_to_args_n_kwargs" title="Permalink to this definition"></a></dt>
+<dd><p>Splits the kwargs into args and kwargs, with the first num_positional_args ported
+to args.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.list_of_length">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">list_of_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#list_of_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.list_of_length" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a random list of the given length from elements in x.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.lists">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.lists" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a list from the dataset arg.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>arg</strong> – dataset of elements.</p></li>
+<li><p><strong>min_size</strong> – least size of the list.</p></li>
+<li><p><strong>max_size</strong> – max size of the list.</p></li>
+<li><p><strong>size_bounds</strong> – if min_size or max_size is None, draw them randomly from the range
+[size_bounds[0], size_bounds[1]].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a list.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.mutually_broadcastable_shapes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">mutually_broadcastable_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_shapes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#mutually_broadcastable_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.mutually_broadcastable_shapes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.none_or_list_of_floats">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">none_or_list_of_floats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#none_or_list_of_floats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.none_or_list_of_floats" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a List containing Nones or Floats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtype</strong> – float data type (‘float16’, ‘float32’, or ‘float64’).</p></li>
+<li><p><strong>size</strong> – size of the list required.</p></li>
+<li><p><strong>min_value</strong> – lower bound for values in the list</p></li>
+<li><p><strong>max_value</strong> – upper bound for values in the list</p></li>
+<li><p><strong>exclude_min</strong> – if True, exclude the min_value</p></li>
+<li><p><strong>exclude_max</strong> – if True, exclude the max_value</p></li>
+<li><p><strong>no_none</strong> – if True, List does not contains None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>A strategy that draws a List containing Nones or Floats.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.num_positional_args">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">num_positional_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#num_positional_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.num_positional_args" title="Permalink to this definition"></a></dt>
+<dd><p>Draws an integers randomly from the minimum and maximum number of positional
+arguments a given function can take.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>fn_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – name of the function. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that can be used in the &#64;given hypothesis decorator.</em></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<dl class="simple">
+<dt>&#64;given(</dt><dd><p>num_positional_args=num_positional_args(fn_name=”floor_divide”)</p>
+</dd>
+</dl>
+<p>)
+&#64;given(</p>
+<blockquote>
+<div><p>num_positional_args=num_positional_args(fn_name=”add”)</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.num_positional_args_from_fn">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">num_positional_args_from_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#num_positional_args_from_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.num_positional_args_from_fn" title="Permalink to this definition"></a></dt>
+<dd><p>Draws an integers randomly from the minimum and maximum number of positional
+arguments a given function can take.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – name of the function. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that can be used in the &#64;given hypothesis decorator.</em></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<dl class="simple">
+<dt>&#64;given(</dt><dd><p>num_positional_args=num_positional_args_from_fn(fn=”floor_divide”)</p>
+</dd>
+</dl>
+<p>)
+&#64;given(</p>
+<blockquote>
+<div><p>num_positional_args=num_positional_args_from_fn(fn=”add”)</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.prod">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">prod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#prod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.prod" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.reshape_shapes">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">reshape_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#reshape_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.reshape_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a random shape with the same number of elements as the given shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>shape</strong> – list/strategy/tuple of integers representing an array shape.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a tuple.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.seed">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#seed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.seed" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.subsets">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">subsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#subsets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.subsets" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a subset of elements from the given elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> – special function that draws data randomly (but is reproducible) from a given
+data-set (ex. list).</p></li>
+<li><p><strong>elements</strong> – set of elements to be drawn from.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>A strategy that draws a subset of elements.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.test_frontend_array_instance_method">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">test_frontend_array_instance_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frontend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frontend_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#test_frontend_array_instance_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.test_frontend_array_instance_method" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a frontend instance method for the current backend by comparing the
+result with the function in the associated framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dtypes</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>]]) – data types of the input arguments in order.</p></li>
+<li><p><strong>as_variable_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as an ivy Variable.</p></li>
+<li><p><strong>with_out</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, the function is also tested with the optional out argument.</p></li>
+<li><p><strong>num_positional_args</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of input arguments that must be passed as positional
+arguments.</p></li>
+<li><p><strong>native_array_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as a native array.</p></li>
+<li><p><strong>fw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current backend (framework).</p></li>
+<li><p><strong>frontend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current frontend (framework).</p></li>
+<li><p><strong>frontend_class</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>) – class in the frontend framework.</p></li>
+<li><p><strong>fn_tree</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Path to function in frontend framework namespace.</p></li>
+<li><p><strong>rtol</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – relative tolerance value. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>atol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – absolute tolerance value. (default: <code class="docutils literal notranslate"><span class="pre">1e-06</span></code>)</p></li>
+<li><p><strong>test_values</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, test for the correctness of the resulting values. (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – input arguments to the function as keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ret</em> – optional, return value from the function</p></li>
+<li><p><em>ret_np</em> – optional, return value from the Numpy function</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.test_frontend_function">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">test_frontend_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frontend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#test_frontend_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.test_frontend_function" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a frontend function for the current backend by comparing the result with
+the function in the associated framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dtypes</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>]]) – data types of the input arguments in order.</p></li>
+<li><p><strong>as_variable_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as an ivy Variable.</p></li>
+<li><p><strong>with_out</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, the function is also tested for inplace update to an array
+passed to the optional out argument, should not be True together
+with with_inplace.</p></li>
+<li><p><strong>with_inplace</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, the function is also tested with direct inplace update back to (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+the inputted array, should not be True together with with_out.</p></li>
+<li><p><strong>num_positional_args</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of input arguments that must be passed as positional
+arguments.</p></li>
+<li><p><strong>native_array_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as a native array.</p></li>
+<li><p><strong>fw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current backend (framework).</p></li>
+<li><p><strong>frontend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current frontend (framework).</p></li>
+<li><p><strong>fn_tree</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Path to function in frontend framework namespace.</p></li>
+<li><p><strong>rtol</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – relative tolerance value. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>atol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – absolute tolerance value. (default: <code class="docutils literal notranslate"><span class="pre">1e-06</span></code>)</p></li>
+<li><p><strong>test_values</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, test for the correctness of the resulting values. (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – input arguments to the function as keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ret</em> – optional, return value from the function</p></li>
+<li><p><em>ret_np</em> – optional, return value from the Numpy function</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.test_function">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">test_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_gradients</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tensorflow'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_flat_np_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">all_as_kwargs_np</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#test_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.test_function" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a function that consumes (or returns) arrays for the current backend
+by comparing the result with numpy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dtypes</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>]]) – data types of the input arguments in order.</p></li>
+<li><p><strong>as_variable_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as an ivy Variable.</p></li>
+<li><p><strong>with_out</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, the function is also tested with the optional out argument.</p></li>
+<li><p><strong>num_positional_args</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of input arguments that must be passed as positional
+arguments.</p></li>
+<li><p><strong>native_array_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument should be treated
+as a native array.</p></li>
+<li><p><strong>container_flags</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – <dl class="simple">
+<dt>dictates whether the corresponding input argument should be treated</dt><dd><p>as an ivy Container.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>instance_method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – <dl class="simple">
+<dt>if True, the function is run as an instance method of the first</dt><dd><p>argument (should be an ivy Array or Container).</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>fw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current backend (framework).</p></li>
+<li><p><strong>fn_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name of the function to test.</p></li>
+<li><p><strong>rtol</strong> – relative tolerance value.</p></li>
+<li><p><strong>atol</strong> – absolute tolerance value.</p></li>
+<li><p><strong>test_values</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, test for the correctness of the resulting values. (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>test_gradients</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if True, test for the correctness of gradients. (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)</p></li>
+<li><p><strong>ground_truth_backend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Ground Truth Backend to compare the result-values. (default: <code class="docutils literal notranslate"><span class="pre">'tensorflow'</span></code>)</p></li>
+<li><p><strong>device</strong> – The device on which to create arrays</p></li>
+<li><p><strong>return_flat_np_arrays</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If test_values is False, this flag dictates whether the original returns are (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+returned, or whether the flattened numpy arrays are returned.</p></li>
+<li><p><strong>all_as_kwargs_np</strong> – input arguments to the function as keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ret</em> – optional, return value from the function</p></li>
+<li><p><em>ret_gt</em> – optional, return value from the Ground Truth function</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">input_dtypes</span> <span class="o">=</span> <span class="s1">&#39;float64&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">as_variable_flags</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">with_out</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num_positional_args</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">native_array_flags</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">container_flags</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance_method</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fw</span> <span class="o">=</span> <span class="s2">&quot;torch&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn_name</span> <span class="o">=</span> <span class="s2">&quot;abs&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_function</span><span class="p">(</span><span class="n">input_dtypes</span><span class="p">,</span> <span class="n">as_variable_flags</span><span class="p">,</span> <span class="n">with_out</span><span class="p">,</span>                            <span class="n">num_positional_args</span><span class="p">,</span> <span class="n">native_array_flags</span><span class="p">,</span>                            <span class="n">container_flags</span><span class="p">,</span> <span class="n">instance_method</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">input_dtypes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="s1">&#39;float32&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">as_variable_flags</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">with_out</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num_positional_args</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">native_array_flags</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">container_flags</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance_method</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fw</span> <span class="o">=</span> <span class="s2">&quot;numpy&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn_name</span> <span class="o">=</span> <span class="s2">&quot;add&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">24</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_function</span><span class="p">(</span><span class="n">input_dtypes</span><span class="p">,</span> <span class="n">as_variable_flags</span><span class="p">,</span> <span class="n">with_out</span><span class="p">,</span>                            <span class="n">num_positional_args</span><span class="p">,</span> <span class="n">native_array_flags</span><span class="p">,</span>                             <span class="n">container_flags</span><span class="p">,</span> <span class="n">instance_method</span><span class="p">,</span>                              <span class="n">fw</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="o">=</span><span class="n">x2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.test_method">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">test_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dtypes_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_variable_flags_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positional_args_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">native_array_flags_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_flags_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_as_kwargs_np_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'__call__'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_with_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_with_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_gradients</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tensorflow'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#test_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.test_method" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a class-method that consumes (or returns) arrays for the current backend
+by comparing the result with numpy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dtypes_init</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>]]]) – data types of the input arguments to the constructor in order. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>as_variable_flags_init</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]]) – dictates whether the corresponding input argument passed to the constructor (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)
+should be treated as an ivy.Variable.</p></li>
+<li><p><strong>num_positional_args_init</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of input arguments that must be passed as positional arguments to the (default: <code class="docutils literal notranslate"><span class="pre">0</span></code>)
+constructor.</p></li>
+<li><p><strong>native_array_flags_init</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]]) – dictates whether the corresponding input argument passed to the constructor (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)
+should be treated as a native array.</p></li>
+<li><p><strong>all_as_kwargs_np_init</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – input arguments to the constructor as keyword arguments. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>input_dtypes_method</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dtype</span></code>]]) – data types of the input arguments to the method in order.</p></li>
+<li><p><strong>as_variable_flags_method</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument passed to the method should
+be treated as an ivy.Variable.</p></li>
+<li><p><strong>num_positional_args_method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of input arguments that must be passed as positional arguments to the
+method.</p></li>
+<li><p><strong>native_array_flags_method</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument passed to the method should
+be treated as a native array.</p></li>
+<li><p><strong>container_flags_method</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – dictates whether the corresponding input argument passed to the method should
+be treated as an ivy Container.</p></li>
+<li><p><strong>all_as_kwargs_np_method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – input arguments to the method as keyword arguments.</p></li>
+<li><p><strong>fw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – current backend (framework).</p></li>
+<li><p><strong>class_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name of the class to test.</p></li>
+<li><p><strong>method_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name of tthe method to test. (default: <code class="docutils literal notranslate"><span class="pre">'__call__'</span></code>)</p></li>
+<li><p><strong>init_with_v</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if the class being tested is an ivy.Module, then setting this flag as True will (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+call the constructor with the variables v passed explicitly.</p></li>
+<li><p><strong>method_with_v</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if the class being tested is an ivy.Module, then setting this flag as True will (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+call the method with the variables v passed explicitly.</p></li>
+<li><p><strong>rtol</strong> – relative tolerance value.</p></li>
+<li><p><strong>atol</strong> – absolute tolerance value.</p></li>
+<li><p><strong>test_values</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – can be a bool or a string to indicate whether correctness of values should be (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)
+tested. If the value is <cite>with_v</cite>, shapes are tested but not values.</p></li>
+<li><p><strong>ground_truth_backend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Ground Truth Backend to compare the result-values. (default: <code class="docutils literal notranslate"><span class="pre">'tensorflow'</span></code>)</p></li>
+<li><p><strong>device</strong> – The device on which to create arrays.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ret</em> – optional, return value from the function</p></li>
+<li><p><em>ret_gt</em> – optional, return value from the Ground Truth function</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.test_unsupported_function">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">test_unsupported_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#test_unsupported_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.test_unsupported_function" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a function with an unsupported datatype to raise an exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> – callable function to test.</p></li>
+<li><p><strong>args</strong> – arguments to the function.</p></li>
+<li><p><strong>kwargs</strong> – keyword-arguments to the function.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.value_test">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">value_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_np_flat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_np_from_gt_flat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TensorFlow'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#value_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.value_test" title="Permalink to this definition"></a></dt>
+<dd><p>Performs a value test for matching the arrays in ret_np_flat and
+ret_from_np_flat.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ret_np_flat</strong> – A list (flattened) containing Numpy arrays. Return from the
+framework to test.</p></li>
+<li><p><strong>ret_np_from_gt_flat</strong> – A list (flattened) containing Numpy arrays. Return from the ground
+truth framework.</p></li>
+<li><p><strong>rtol</strong> – Relative Tolerance Value.</p></li>
+<li><p><strong>atol</strong> – Absolute Tolerance Value.</p></li>
+<li><p><strong>ground_truth_backend</strong> – Ground Truth Backend Framework.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>None if the value test passes, else marks the test as failed.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.var_fn">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">var_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#var_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.var_fn" title="Permalink to this definition"></a></dt>
+<dd><p>Returns x as an Ivy Variable wrapping an Ivy Array with given dtype and device</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.helpers.x_and_filters">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.helpers.</span></span><span class="sig-name descname"><span class="pre">x_and_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depthwise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/ivy_tests/test_ivy/helpers.html#x_and_filters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.helpers.x_and_filters" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </section>

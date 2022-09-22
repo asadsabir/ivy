@@ -136,8 +136,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="test-gradients">
-<h1>Test gradients<a class="headerlink" href="#test-gradients" title="Permalink to this heading"></a></h1>
+  <section id="module-ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients">
+<span id="test-gradients"></span><h1>Test gradients<a class="headerlink" href="#module-ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients" title="Permalink to this heading"></a></h1>
+<p>Collection of tests for unified gradient functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.get_gradient_arguments_with_lr">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">get_gradient_arguments_with_lr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_lr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#get_gradient_arguments_with_lr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.get_gradient_arguments_with_lr" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchStrategy</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_grad">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_grad" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_jac">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_jac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_jac"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_jac" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_set_with_grads">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_set_with_grads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grads</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_set_with_grads"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_set_with_grads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_unset_with_grads">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_unset_with_grads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grads</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_unset_with_grads"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_unset_with_grads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_value_and_grad">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_value_and_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_value_and_grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_value_and_grad" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_with_grads">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.</span></span><span class="sig-name descname"><span class="pre">test_with_grads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grads</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/ivy_tests/test_ivy/test_functional/test_core/test_gradients.html#test_with_grads"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_functional.test_core.test_gradients.test_with_grads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </section>

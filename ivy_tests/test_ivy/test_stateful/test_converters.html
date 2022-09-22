@@ -136,8 +136,120 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="test-converters">
-<h1>Test converters<a class="headerlink" href="#test-converters" title="Permalink to this heading"></a></h1>
+  <section id="module-ivy.ivy_tests.test_ivy.test_stateful.test_converters">
+<span id="test-converters"></span><h1>Test converters<a class="headerlink" href="#module-ivy.ivy_tests.test_ivy.test_stateful.test_converters" title="Permalink to this heading"></a></h1>
+<p>Collection of tests for module converters.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuLinear">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_stateful.test_converters.</span></span><span class="sig-name descname"><span class="pre">HaikuLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#HaikuLinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuLinear" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuLinear.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#HaikuLinear.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuLinear.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes the current module with the given name.</p>
+<p>Subclasses should call this constructor before creating other modules or
+variables such that those modules are named correctly.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>name: An optional string name for the class. Must be a valid Python</dt><dd><p>identifier. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is not provided then the class name for the
+current instance is converted to <code class="docutils literal notranslate"><span class="pre">lower_snake_case</span></code> and used instead.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_stateful.test_converters.</span></span><span class="sig-name descname"><span class="pre">HaikuModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#HaikuModule"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuModule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuModule.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#HaikuModule.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.HaikuModule.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes the current module with the given name.</p>
+<p>Subclasses should call this constructor before creating other modules or
+variables such that those modules are named correctly.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>name: An optional string name for the class. Must be a valid Python</dt><dd><p>identifier. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is not provided then the class name for the
+current instance is converted to <code class="docutils literal notranslate"><span class="pre">lower_snake_case</span></code> and used instead.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_stateful.test_converters.</span></span><span class="sig-name descname"><span class="pre">TorchLinearModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchLinearModule"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchLinearModule.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchLinearModule.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchLinearModule.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_stateful.test_converters.</span></span><span class="sig-name descname"><span class="pre">TorchModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchModule"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchModule.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#TorchModule.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.TorchModule.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ivy.ivy_tests.test_ivy.test_stateful.test_converters.test_to_ivy_module">
+<span class="sig-prename descclassname"><span class="pre">ivy.ivy_tests.test_ivy.test_stateful.test_converters.</span></span><span class="sig-name descname"><span class="pre">test_to_ivy_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bs_ic_oc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_class_and_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace_update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/ivy_tests/test_ivy/test_stateful/test_converters.html#test_to_ivy_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.ivy_tests.test_ivy.test_stateful.test_converters.test_to_ivy_module" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </section>
